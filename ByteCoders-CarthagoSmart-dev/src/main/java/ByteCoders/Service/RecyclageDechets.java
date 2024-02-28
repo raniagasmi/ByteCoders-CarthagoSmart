@@ -1,8 +1,8 @@
-package esprit.tn.Service;
+package ByteCoders.Service;
 
 
-import esprit.tn.Entity.Recyclage.lieuRecyclage;
-import esprit.tn.Util.MyDB;
+import ByteCoders.Model.lieuRecyclage;
+import ByteCoders.Service.MyDB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
