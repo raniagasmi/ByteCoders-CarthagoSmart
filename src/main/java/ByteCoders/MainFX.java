@@ -13,15 +13,13 @@ public class MainFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // FXMLLoader loader1 = new FXMLLoader((getClass().getResource("/responsable.fxml")));
-        FXMLLoader loader2 = new FXMLLoader((getClass().getResource("/gestion_dechets.fxml")));
-        //Parent root1 = loader1.load();
-        Parent root2 = loader2.load();
-        //Scene scene1 = new Scene(root1);
-        Scene scene2 = new Scene(root2);
+        //FXMLLoader loader = new FXMLLoader((getClass().getResource("/responsable.fxml")));
+        FXMLLoader loader = new FXMLLoader((getClass().getResource("/gestion_dechets.fxml")));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
         primaryStage.setTitle("CarthagoSmart");
         //primaryStage.setScene(scene1);
-        primaryStage.setScene(scene2);
+        primaryStage.setScene(scene);
         primaryStage.show();
 
 

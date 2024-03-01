@@ -138,7 +138,6 @@ public class Responsable {
 
             executeQuery(query);
             afficher();
-
             con.commit();  // Validation de la transaction
         } catch (SQLException ex) {
             con.rollback();  // Annulation de la transaction en cas d'erreur

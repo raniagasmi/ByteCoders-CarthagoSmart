@@ -26,6 +26,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+
 public class gestion_dechets {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("gestion-dechets.fxml"));
     @FXML
@@ -109,7 +110,6 @@ public class gestion_dechets {
             }
         }
     }
-
     ///********MAP************//
     private boolean isMapViewVisible = false;
 
@@ -128,11 +128,10 @@ public class gestion_dechets {
         // Désactive l'affichage initial de la carte
         adresse.setVisible(false);
         //adresse.setManaged(false); // Ne prend pas d'espace s'il est invisible
-        MapView mapView = new MapView();
+        MapView mapView = createMapView();
         adresse.getChildren().add(mapView);
         VBox.setVgrow(mapView , Priority.ALWAYS);
     }
-
     @FXML
     private void handleFindLocations(ActionEvent event) {
         String TypedechetsStr = TypeDechetsComboBox.getValue();
@@ -149,29 +148,27 @@ public class gestion_dechets {
             findRecyclageButton.setVisible(true);
         } else {
             // Masque la carte si elle n'est pas déjà visible
-            adresse.setVisible(true);
+            adresse.setVisible(false);
 
             if (!isMapViewVisible) {
                 adresse.setVisible(true);
+                isMapViewVisible = true;
             }
         }
     }
-
-
     @FXML
     private MapView createMapView() {
         MapView mapView = new MapView();
-        mapView.setPrefSize(100,50);
+        mapView.setPrefSize(80,50);
         mapView.addLayer(new CustomMapLayer());
-        mapView.setZoom(80);
+        mapView.setZoom(10.5);
         mapView.flyTo(0,Tunisia,0.1);
         return mapView;
     }
-
     public class CustomMapLayer extends MapLayer {
         private final Node marker;
         public CustomMapLayer(){
-            marker = new Circle(5, Color.RED);
+            marker = new Circle(8, Color.RED);
             getChildren().add(marker);
         }
         @Override
@@ -182,17 +179,3 @@ public class gestion_dechets {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
