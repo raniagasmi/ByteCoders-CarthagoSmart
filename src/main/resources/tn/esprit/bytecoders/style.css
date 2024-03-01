@@ -1,0 +1,5 @@
+.button{
+    fx-badkground-color: linear-gradient(rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(26, 159, 223, 1));
+    fx-border: 1px solid #ffffff;
+    fx-border-radius: 30px;
+}

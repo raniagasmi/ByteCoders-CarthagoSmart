@@ -16,7 +16,7 @@ public class Facture {
     private Double montant;
     private TypeFacture type;
     private boolean estPayee; //true si facture payée
-    private int id_user;
+    private User user;
 
     public Facture(String libelle, Date date, Date date_ech, Double montant, TypeFacture type, boolean estPayee, int id_user) {
         this.libelle = libelle;
@@ -25,11 +25,13 @@ public class Facture {
         this.montant = montant;
         this.type = type;
         this.estPayee = estPayee;
-        this.id_user = id_user;
+        this.user.id_user = id_user;
     }
 
     public Facture(){
 
     }
 
+    public Facture(int idFacture, String text, Date date, Date dateEch, double montant, TypeFacture energie, boolean selected, int i) {
+    }
 }

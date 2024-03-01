@@ -1,5 +1,6 @@
 package tn.esprit.bytecoders.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -10,9 +11,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import tn.esprit.bytecoders.Entity.Consommation;
 import tn.esprit.bytecoders.Entity.Facture;
 import tn.esprit.bytecoders.Entity.TypeFacture;
@@ -96,7 +102,7 @@ public class FacturesController implements Initializable {
 
 
     @FXML
-    void addFacture(ActionEvent event) {
+    void addFacture(ActionEvent event) throws IOException {
         if (!isFormValid()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Veuillez verifier vos données! ");
@@ -141,6 +147,12 @@ public class FacturesController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Facture ajoutée avec succès!");
         alert.show();
+
+        Parent root = FXMLLoader.load(getClass().getResource("/factureEAU.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
     }
 
     private boolean isFormValid() {
