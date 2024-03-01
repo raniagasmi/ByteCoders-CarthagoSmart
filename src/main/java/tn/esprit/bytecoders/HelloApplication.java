@@ -39,6 +39,7 @@ public class HelloApplication extends Application {
 
 
 
+
        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("factures.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
