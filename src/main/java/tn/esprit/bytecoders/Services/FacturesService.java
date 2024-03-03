@@ -51,7 +51,7 @@ public class FacturesService implements IFacture {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 Facture facture = new Facture();
-                facture.setId_facture(rs.getInt("id_facture"));
+                facture.setRef_facture(rs.getInt("id_facture"));
                 facture.setLibelle(rs.getString("libelle"));
                 facture.setDate(rs.getDate("date"));
                 facture.setDate_ech(rs.getDate("date_ech"));
@@ -83,7 +83,7 @@ public class FacturesService implements IFacture {
             preparedStatement.setDouble(4, facture.getMontant());
             preparedStatement.setString(5, facture.getType().toString());
             preparedStatement.setBoolean(6, facture.isEstPayee());
-            preparedStatement.setInt(7, facture.getId_facture());
+            preparedStatement.setInt(7, facture.getRef_facture());
             preparedStatement.executeUpdate();
             System.out.println("Facture modifiée avec succès!");
         } catch (Exception e) {
@@ -96,7 +96,7 @@ public class FacturesService implements IFacture {
         try {
             String req = "DELETE FROM facture WHERE id_facture = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(req);
-            preparedStatement.setInt(1, facture.getId_facture());
+            preparedStatement.setInt(1, facture.getRef_facture());
             preparedStatement.executeUpdate();
             System.out.println("Facture supprimée avec succès!");
             return true;
@@ -115,7 +115,7 @@ public class FacturesService implements IFacture {
             stm.setInt(1, id);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                facture.setId_facture(rs.getInt("id_facture"));
+                facture.setRef_facture(rs.getInt("id_facture"));
                 facture.setLibelle(rs.getString("libelle"));
                 facture.setDate(rs.getDate("date"));
                 facture.setDate_ech(rs.getDate("date_ech"));

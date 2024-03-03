@@ -1,7 +1,13 @@
 package tn.esprit.bytecoders.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     int id_user;
     private String num_compte;

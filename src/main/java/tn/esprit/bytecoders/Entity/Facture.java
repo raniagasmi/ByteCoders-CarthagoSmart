@@ -9,7 +9,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @ToString
 public class Facture {
-    int id_facture;
+    int ref_facture;
     private String libelle;
     private Date date;
     private Date date_ech;
@@ -25,6 +25,7 @@ public class Facture {
         this.montant = montant;
         this.type = type;
         this.estPayee = estPayee;
+        this.user = new User();
         this.user.id_user = id_user;
     }
 

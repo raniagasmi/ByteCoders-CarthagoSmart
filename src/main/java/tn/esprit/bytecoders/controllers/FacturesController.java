@@ -3,7 +3,6 @@ package tn.esprit.bytecoders.controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -19,9 +18,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import tn.esprit.bytecoders.Entity.Consommation;
 import tn.esprit.bytecoders.Entity.Facture;
 import tn.esprit.bytecoders.Entity.TypeFacture;
+import tn.esprit.bytecoders.Entity.User;
 import tn.esprit.bytecoders.Services.FacturesService;
 import tn.esprit.bytecoders.models.FactureModel;
 
@@ -131,14 +130,18 @@ public class FacturesController implements Initializable {
                         Double.parseDouble(montant.getText()),
                         wasteTypeComboBox.getValue().toString().equals("ENERGIE") ? TypeFacture.ENERGY : TypeFacture.EAU,
                         payee.isSelected(),
-                        1
+                        new User(
+                                1,
+                                "123456789",
+                                "Tunis"
+                        ).getId_user()
                 );
                 fs.update(facture);
                 addToTableView();
             }
             resetFacture();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Veuillez verifier vos données! ");
             alert.show();
@@ -194,7 +197,7 @@ public class FacturesController implements Initializable {
             System.out.println(factures);
             for (Facture facture : factures) {
                 facturesModels.add(new FactureModel(
-                        facture.getId_facture(),
+                        facture.getRef_facture(),
                         facture.getLibelle(),
                         facture.getDate().toString(),
                         facture.getDate_ech().toString(),
@@ -209,7 +212,7 @@ public class FacturesController implements Initializable {
     }
 
     public void fillForm(Facture facture){
-        this.facture.setText(String.valueOf(facture.getId_facture()));
+        this.facture.setText(String.valueOf(facture.getRef_facture()));
         this.libelle.setText(facture.getLibelle());
         this.date.setValue(facture.getDate().toLocalDate());
         this.date_ech.setValue(facture.getDate_ech().toLocalDate());

@@ -4,6 +4,7 @@ module tn.esprit.bytecoders {
     requires javafx.fxml;
     requires javafx.controls;
     requires lombok;
+    requires com.gluonhq.maps;
 
 
     opens tn.esprit.bytecoders to javafx.fxml;
