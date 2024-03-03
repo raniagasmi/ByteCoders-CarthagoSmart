@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="526.0" prefWidth="791.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.gestion_dechets">
+    <children>
+        <ImageView fitHeight="51.0" fitWidth="138.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Plan de travail 1@3x.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="accueil" layoutX="167.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="déchets" layoutX="258.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="facture" layoutX="350.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="evenements" layoutX="442.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+        <!--Button layoutX="429.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnNotifcationOnAction" prefHeight="40.0" prefWidth="138.0" text="Notification">
+            <font>
+                <Font name="Bell MT" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button-->
+                <Label layoutX="168.0" layoutY="85.0" prefHeight="18.0" prefWidth="245.0" text="Choisisez Votre Type de déchets">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Label>
+                <ComboBox fx:id="TypeDechetsComboBox" layoutX="167.0" layoutY="115.0" prefHeight="31.0" prefWidth="258.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Non Recyclable" />
+                            <String fx:value="Recyclable" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <!--Label layoutX="64.0" layoutY="135.0" text="Votre Position" />
+                <TextField fx:id="positionField" layoutX="165.0" layoutY="128.0" mouseTransparent="true" prefHeight="31.0" prefWidth="258.0" /-->
+                <Button fx:id="findLocationsButton" cancelButton="true" defaultButton="true" layoutX="166.0" layoutY="161.0" onAction="#handleFindLocations" text="Recherchez les points de ramassage">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+                <DatePicker fx:id="datePicker" layoutX="167.0" layoutY="210.0" prefHeight="31.0" prefWidth="258.0" promptText="Sélectionnez la date" />
+                <Button fx:id="VerifierSIButton" defaultButton="true" layoutX="167.0" layoutY="263.0" onAction="#handleVerifierSI" prefHeight="31.0" prefWidth="268.0" text="Verifiez si un jour de ramassage">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+
+        <Label fx:id="collectionStatusLabel" layoutX="101.0" layoutY="310.0" prefHeight="31.0" prefWidth="391.0" text="" />
+                <Button fx:id="findRecyclageButton" defaultButton="true" layoutX="168.0" layoutY="357.0" onAction="#handleFindRecyclage" text="Recherchez les points de Recyclage">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
+                <VBox fx:id="adresse" layoutX="477.0" layoutY="131.0" prefHeight="226.0" prefWidth="278.0">
+                    <!-- Contenu de la carte (VBox) -->
+                    <Label fx:id="positionLabel" />
+                </VBox>
+
+                <ImageView fitHeight="118.0" fitWidth="143.0" layoutY="383.0" opacity="10" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Capture%20d'écran%202024-02-28%20061039.png" />
+                    </image>
+                </ImageView>
+
+
+    </children>
+</AnchorPane>

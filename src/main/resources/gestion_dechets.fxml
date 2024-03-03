@@ -11,8 +11,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
 <?import com.gluonhq.maps.MapView?>
+
 <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="696.0" prefWidth="983.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.gestion_dechets">
     <children>
         <Label layoutX="446.0" layoutY="337.0" text="Type de déchet" />
@@ -33,7 +33,7 @@
         <Button fx:id="findRecyclageButton" defaultButton="true" layoutX="561.0" layoutY="632.0" onAction="#handleFindRecyclage" text="Recherchez les points de Recyclage" />
         <VBox fx:id="adresse" layoutX="519.0" layoutY="26.0" prefHeight="277.0" prefWidth="357.0">
             <!-- Contenu de la carte (VBox) -->
-            <!--MapView fx:id="createMapView" /-->
+            <Label fx:id="positionLabel" />
         </VBox>
 
         <ImageView fitHeight="188.0" fitWidth="218.0" layoutY="445.0" opacity="10" pickOnBounds="true" preserveRatio="true">

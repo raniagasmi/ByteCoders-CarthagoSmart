@@ -2,18 +2,18 @@ package ByteCoders.ViewController;
 
 import ByteCoders.Model.Categorie;
 import ByteCoders.Model.collect;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -61,6 +61,7 @@ public class Responsable {
 
     @FXML
     private Button btnSupprimer;
+    private List<ByteCoders.Model.collect> collect;
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws SQLException {
@@ -73,10 +74,16 @@ public class Responsable {
             deleteRecord();
         }
     }
-
     public void initialize(URL url, ResourceBundle resourceBundle) throws SQLException {
         afficher();
+
+        addToTableView("");
+
+        search.textProperty().addListener((observable, oldVal, newVal) -> {
+            addToTableView(newVal);
+        });
     }
+
 
     public Connection getCnx() throws SQLException {
         try {
@@ -146,14 +153,7 @@ public class Responsable {
             con.setAutoCommit(true);  // Rétablissement de l'autocommit par défaut
         }
     }
-    /*public void insertRecord() throws SQLException {
-        String query = "INSERT INTO collectdechets (nomType, Categorie, PointRamassage, DateRamassage) " +
-                "VALUES ('" + tfType.getText() + "', '" + tfCategorie.getText() + "', '" +
-                tfPtRamassage.getText() + "', '" + tfDateRamassage.getText() + "')";
 
-        executeQuery(query);
-        afficher();
-    }*/
     public void updateRecord() throws SQLException {
         String query = "UPDATE collectdechets SET Categorie = '" + tfCategorie.getText() + "', PointRamassage = '" +
                 tfPtRamassage.getText() + "', DateRamassage = '" + tfDateRamassage.getText() +
@@ -168,8 +168,43 @@ public class Responsable {
         executeQuery(query);
         afficher();
     }
+
+    //TRI PAR CATEGORIE//
+    /*@FXML
+    private void handleTriParCategorie(ActionEvent event) {
+        tableView.getSortOrder().clear(); // Effacer les ordres de tri existants
+
+        // Ajouter le tri par catégorie
+        Categorie.setSortType(TableColumn.SortType.ASCENDING);
+        tableView.getSortOrder().add(Categorie);
+        tableView.sort();
+    }*/
+    @FXML
+    private TextField search;
+    public void addToTableView(String newVal) {
+
+        try {
+            collectList.clear();
+            List<collect> collection = collect;
+            collection.removeIf(collect -> !collect.getCategorie().equals(newVal));
+            for (collect item : collection) {
+                collectList.add(new collect(
+                        item.getTypeId(),
+                        item.getNomType(),
+                        item.getCategorie(),
+                        item.getPointRamassage(),
+                        item.getDateRamassage(),
+                        item.getPointRecyclage()
+                ));
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
     //mettre à jour la base de données
-     private void executeQuery(String query) throws SQLException {
+    private void executeQuery(String query) throws SQLException {
         Connection con = getCnx();
         Statement st = null;
         try {
@@ -187,6 +222,4 @@ public class Responsable {
                 ex.printStackTrace();
             }
         }
-    }
-}
-
+    }}
