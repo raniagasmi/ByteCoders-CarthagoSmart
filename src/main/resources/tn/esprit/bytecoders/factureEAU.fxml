@@ -7,14 +7,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.bytecoders.controllers.FactureEauController">
    <children>
-      <TableView layoutX="74.0" layoutY="147.0" prefHeight="200.0" prefWidth="452.0">
-        <columns>
-          <TableColumn fx:id="num_fact" prefWidth="75.0" text="N° facture" />
-          <TableColumn fx:id="libellé" prefWidth="128.79998779296875" text="Libellé" />
-            <TableColumn fx:id="date_facture" minWidth="0.0" prefWidth="70.4000244140625" text="Date" />
-            <TableColumn fx:id="date_ech_facture" prefWidth="72.0" text="Date d'écheance " />
-            <TableColumn fx:id="statut" prefWidth="105.5999755859375" text="Statut" />
-        </columns>
+      <TableView fx:id="tab" layoutX="74.0" layoutY="147.0" prefHeight="200.0" prefWidth="452.0">
+         <columns>
+            <TableColumn fx:id="id_facture" prefWidth="75.0" text="num_facture" />
+            <TableColumn fx:id="libelle_facture" prefWidth="75.0" text="Libellé" />
+            <TableColumn fx:id="date_facture" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="date_ech_facture" prefWidth="75.0" text="Date d'écheance" />
+            <TableColumn fx:id="montant_facture" prefWidth="75.0" text="Montant" />
+            <TableColumn fx:id="type_facture" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="payee_facture" prefWidth="75.0" text="Payée" />
+         </columns>
       </TableView>
       <Text fx:id="username" layoutX="74.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENT" />
       <Text fx:id="adresse" layoutX="74.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" />
@@ -53,7 +55,6 @@
             <Image url="@../../../images/Account.png" />
          </image>
       </ImageView>
-      <ScrollBar layoutX="526.0" layoutY="147.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="14.0" />
       <Button layoutX="74.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #199FDF;" text="Payer" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />

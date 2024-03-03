@@ -40,7 +40,7 @@ public class HelloApplication extends Application {
 
 
 
-       FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("factures.fxml"));
+       FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("factureEAU.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         primaryStage.setTitle("CarthagoSmart");
@@ -49,6 +49,9 @@ public class HelloApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
+
+
+
 
 
 

@@ -100,6 +100,7 @@ public class FacturesController implements Initializable {
     }
 
 
+
     @FXML
     void addFacture(ActionEvent event) throws IOException {
         if (!isFormValid()) {
