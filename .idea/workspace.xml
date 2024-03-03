@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="change facture entity attribute">
+    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="add dynamic search">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/metiers/UserStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/paiement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Services/FacturesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Services/FacturesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FactureEauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FactureEauController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FacturesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FacturesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/IFacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/IFacture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/factureEAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/factureEAU.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +133,7 @@
       <workItem from="1709303356183" duration="5562000" />
       <workItem from="1709370082728" duration="1933000" />
       <workItem from="1709460139202" duration="3658000" />
-      <workItem from="1709466950166" duration="2896000" />
+      <workItem from="1709466950166" duration="11952000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -159,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709465412923</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add dynamic search">
+      <option name="closed" value="true" />
+      <created>1709469917322</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709469917323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +200,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="add modifs" />
     <MESSAGE value="change facture entity attribute" />
-    <option name="LAST_COMMIT_MESSAGE" value="change facture entity attribute" />
+    <MESSAGE value="add dynamic search" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dynamic search" />
   </component>
 </project>

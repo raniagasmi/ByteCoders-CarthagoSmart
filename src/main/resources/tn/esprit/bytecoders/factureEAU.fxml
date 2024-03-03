@@ -61,5 +61,7 @@
          </font>
       </Button>
       <TextField fx:id="search" alignment="CENTER" layoutX="384.0" layoutY="111.0" promptText="Rechercher" />
+      <CheckBox fx:id="payee" layoutX="323.0" layoutY="116.0" mnemonicParsing="false" onAction="#onCheckboxCheck" text="payée" />
+      <CheckBox fx:id="non_payee" layoutX="236.0" layoutY="117.0" mnemonicParsing="false" onAction="#onCheckboxCheck" text="non payée" />
    </children>
 </AnchorPane>

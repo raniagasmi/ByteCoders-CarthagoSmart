@@ -2,6 +2,7 @@ package tn.esprit.bytecoders.controllers;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -9,10 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -22,6 +20,8 @@ import tn.esprit.bytecoders.models.FactureModel;
 
 public class FactureEauController {
 
+    public CheckBox payee;
+    public CheckBox non_payee;
     @FXML
     private ResourceBundle resources;
 
@@ -98,6 +98,10 @@ public class FactureEauController {
 
     @FXML
     void initialize() {
+
+        payee.setSelected(true);
+        non_payee.setSelected(true);
+
         id_facture.setCellValueFactory(new PropertyValueFactory<>("id_facture"));
         libelle_facture.setCellValueFactory(new PropertyValueFactory<>("libelle_facture"));
         date_facture.setCellValueFactory(new PropertyValueFactory<>("date_facture"));
@@ -114,16 +118,27 @@ public class FactureEauController {
     }
 
 
-
-
     public void addToTableView(String newVal) {
         try {
             facturesModels.clear();
             List<Facture> factures = fs.getAll();
-            factures.removeIf(facture -> !facture.getLibelle().contains(newVal));
 
+            List<Facture> filteredFactures = new ArrayList<>();
 
             for (Facture facture : factures) {
+                if ((facture.getType().toString().contains(newVal)) || (facture.getLibelle().contains(newVal))) {
+                    if (payee.isSelected() && facture.isEstPayee())
+                        filteredFactures.add(facture);
+
+                    if (non_payee.isSelected() && !facture.isEstPayee())
+                        filteredFactures.add(facture);
+                }
+
+
+            }
+
+
+            for (Facture facture : filteredFactures) {
                 facturesModels.add(new FactureModel(
                         facture.getRef_facture(),
                         facture.getLibelle(),
@@ -139,4 +154,8 @@ public class FactureEauController {
         }
     }
 
+
+    public void onCheckboxCheck(ActionEvent actionEvent) {
+        addToTableView(search.getText());
+    }
 }

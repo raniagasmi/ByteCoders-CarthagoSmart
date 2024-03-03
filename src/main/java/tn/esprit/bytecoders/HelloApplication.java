@@ -19,65 +19,33 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException, SQLException {
 
+        FacturesService facturesService = new FacturesService();
 
         /*
-        FacturesService factureService = new FacturesService();
-
-        Facture facture = new Facture(
-                "libelle",
-                new Date(2021, 12, 12),
-                new Date(2021, 12, 12),
-                100.2,
-                TypeFacture.EAU,
-                false,
-                1
-        );
-
-        facturesService.create(facture);
-
-*/
-
-
-
+        for (int i = 0; i < 40; i++) {
+            Facture facture = new Facture(
+                    "libelle" + i,
+                    new Date(2001 + (int) (Math.random() * 24), 1 + (int) (Math.random() * 12), 1 + (int) (Math.random() * 28)),
+                    new Date(2001 + (int) (Math.random() * 24), 1 + (int) (Math.random() * 12), 1 + (int) (Math.random() * 28)),
+                    Math.random() * 1000,
+                    // random type
+                    TypeFacture.values()[(int) (Math.random() * TypeFacture.values().length)],
+                    Math.random() > 0.5,
+                    1
+            );
+            facturesService.create(facture);
+        }
+         */
 
        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("factureEAU.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 620, 480);
         primaryStage.setTitle("CarthagoSmart");
         primaryStage.setScene(scene);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
-
-
-
-
-
-
-        /*Scene scene = new Scene(fxmlLoader.load(), 820, 520);
-        stage.setTitle("Carthago-Smart");
-        stage.setScene(scene);
-        stage.show();*/
-
-        /*FXMLLoader fxmlLoader1 = new FXMLLoader(HelloApplication.class.getResource("menuPrincipal.fxml"));
-        Scene scene1 = new Scene(fxmlLoader1.load(), 820, 520);
-        stage.setTitle("Carthago-Smart");
-        stage.setScene(scene1);
-        stage.show();
-
-        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("factureEAU.fxml"));
-        Scene scene2 = new Scene(fxmlLoader2.load(), 820, 520);
-        stage.setTitle("Cartago-Smart");
-        stage.setScene(scene2);
-        stage.show();
-
-        FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("Consommation.fxml"));
-        Scene scene3 = new Scene(fxmlLoader3.load(), 820, 520);
-        stage.setTitle("Carthago-Smart");
-        stage.setScene(scene3);
-        stage.show(); */
-
 
     }
 

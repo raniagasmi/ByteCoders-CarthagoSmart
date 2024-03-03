@@ -134,5 +134,31 @@ public class FacturesService implements IFacture {
     }
 
 
+    public List<Facture> findByUser(int userId) {
+        List<Facture> factures = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM facture WHERE id_user = ?");
+            preparedStatement.setInt(1, userId);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                Facture facture = new Facture();
+                facture.setRef_facture(rs.getInt("id_facture"));
+                facture.setLibelle(rs.getString("libelle"));
+                facture.setDate(rs.getDate("date"));
+                facture.setDate_ech(rs.getDate("date_ech"));
+                facture.setMontant(rs.getDouble("montant"));
+                if (rs.getString("type").equals("EAU")) {
+                    facture.setType(TypeFacture.EAU);
+                } else {
+                    facture.setType(TypeFacture.ENERGY);
+                }
+                facture.setEstPayee(rs.getBoolean("estPayee"));
+                factures.add(facture);
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return factures;
+    }
 }
