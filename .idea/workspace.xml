@@ -4,9 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="add dynamic search">
+    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="add dynamic search_changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/Paiement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/IConsommation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/IPaiement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/DetailsFactureController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Entity/Consommation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/Consommation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Entity/Facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/Facture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Entity/TypeFacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/TypeFacture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Services/FacturesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/FacturesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/ConsommationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/ConsommationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FactureEauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FactureEauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/FacturesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FacturesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/MenuPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/MenuPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/controllers/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/UserManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/IConsommation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/ICrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/ICrud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/IFacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/IFacture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/interfaces/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/IUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/metiers/UserStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/UserStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/models/FactureEauModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/FactureEauModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/models/FactureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/FactureModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/bytecoders/utils/MyDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/MyDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/Consommation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/Consommation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/detailsFacture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/detailsFacture.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/factureEAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/factureEAU.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/factures.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/factures.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/menuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/menuPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/paiement.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tn/esprit/bytecoders/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,6 +85,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -64,7 +105,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Gestion__Energies",
     "last_directory_selection": "C:/dev/projet-git/ByteCoders-CarthagoSmart/src/main/java/tn/esprit/bytecoders",
-    "last_opened_file_path": "C:/dev/Sportify-App_Javafx",
+    "last_opened_file_path": "C:/dev/projet-git/ByteCoders-CarthagoSmart - Copie",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +121,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\projet-git\ByteCoders-CarthagoSmart - Copie\src\main\java\ByteCoders\Service" />
       <recent name="C:\dev\bytecoders\src\main\resources\tn\esprit\bytecoders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -95,7 +137,20 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ByteCoders.HelloApplication">
+    <configuration name="ByteCoders.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ByteCoders.HelloApplication" />
+      <module name="bytecoders" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ByteCoders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tn.esprit.bytecoders.HelloApplication" />
       <module name="bytecoders" />
@@ -111,6 +166,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ByteCoders.HelloApplication" />
         <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
@@ -128,7 +184,11 @@
       <workItem from="1709303356183" duration="5562000" />
       <workItem from="1709370082728" duration="1933000" />
       <workItem from="1709460139202" duration="3658000" />
-      <workItem from="1709466950166" duration="13967000" />
+      <workItem from="1709466950166" duration="19087000" />
+      <workItem from="1709555528000" duration="3518000" />
+      <workItem from="1709559240904" duration="151000" />
+      <workItem from="1709559423727" duration="568000" />
+      <workItem from="1709560040705" duration="474000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -170,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709481808416</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add dynamic search_changes">
+      <option name="closed" value="true" />
+      <created>1709549071291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709549071291</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +272,7 @@
     <MESSAGE value="add modifs" />
     <MESSAGE value="change facture entity attribute" />
     <MESSAGE value="add dynamic search" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dynamic search" />
+    <MESSAGE value="add dynamic search_changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dynamic search_changes" />
   </component>
 </project>

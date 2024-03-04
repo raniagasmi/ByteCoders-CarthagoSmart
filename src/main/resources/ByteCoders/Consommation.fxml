@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.ConsommationController">
+   <children>
+      <AnchorPane layoutX="86.0" layoutY="30.0" prefHeight="32.0" prefWidth="398.0">
+         <children>
+            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="facture" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" textAlignment="CENTER" textFill="#487ef6">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="25.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="526.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Account.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="username" layoutX="74.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENT" />
+      <Text fx:id="adresse" layoutX="74.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" />
+      <Text fx:id="num_contrat" layoutX="74.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num du contrat" />
+      <AnchorPane layoutX="157.0" layoutY="14.0" prefHeight="33.0" prefWidth="200.0" />
+      <LineChart layoutX="155.0" layoutY="163.0" prefHeight="179.0" prefWidth="260.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

@@ -1,4 +1,4 @@
-module tn.esprit.bytecoders {
+module ByteCoders {
     requires java.sql;
     requires javafx.base;
     requires javafx.fxml;
@@ -7,11 +7,12 @@ module tn.esprit.bytecoders {
     requires com.gluonhq.maps;
 
 
-    opens tn.esprit.bytecoders to javafx.fxml;
+    opens ByteCoders to javafx.fxml;
 
-    opens tn.esprit.bytecoders.controllers to javafx.fxml;
-    opens tn.esprit.bytecoders.models to javafx.base;
+    opens ByteCoders.ViewController to javafx.fxml;
+    opens ByteCoders.Model to javafx.base;
 
-    exports tn.esprit.bytecoders;
+    exports ByteCoders;
+
 
 }
