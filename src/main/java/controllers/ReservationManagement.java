@@ -42,11 +42,6 @@ public class ReservationManagement {
             return;
         }
 
-
-
-
-
-
         // Créer un objet Reservation avec les données récupérées
         Reservation reservation = new Reservation(nom_event, email,numero, nbr_place);
 
@@ -61,7 +56,6 @@ public class ReservationManagement {
             // Gérer l'erreur, par exemple, afficher un message à l'utilisateur indiquant que la réservation a échoué.
         }
     }
-
 
 
     private boolean isValidEmail(String email) {
