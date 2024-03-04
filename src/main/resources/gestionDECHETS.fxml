@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="526.0" prefWidth="791.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.gestion_dechets">
+<AnchorPane fx:id="submit" prefHeight="526.0" prefWidth="791.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.gestion_dechets">
     <children>
         <ImageView fitHeight="51.0" fitWidth="138.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -43,7 +42,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button-->
-                <Label layoutX="168.0" layoutY="85.0" prefHeight="18.0" prefWidth="245.0" text="Choisisez Votre Type de déchets">
+                <Label layoutX="173.0" layoutY="86.0" prefHeight="18.0" prefWidth="245.0" text="Choisisez Votre Type de déchets">
          <font>
             <Font name="Arial" size="15.0" />
          </font></Label>
@@ -61,14 +60,14 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-                <DatePicker fx:id="datePicker" layoutX="167.0" layoutY="210.0" prefHeight="31.0" prefWidth="258.0" promptText="Sélectionnez la date" />
+                <!--DatePicker fx:id="datePicker" layoutX="167.0" layoutY="210.0" prefHeight="31.0" prefWidth="258.0" promptText="Sélectionnez la date" />
                 <Button fx:id="VerifierSIButton" defaultButton="true" layoutX="167.0" layoutY="263.0" onAction="#handleVerifierSI" prefHeight="31.0" prefWidth="268.0" text="Verifiez si un jour de ramassage">
          <font>
             <Font size="15.0" />
-         </font></Button>
+         </font></Button-->
 
-        <Label fx:id="collectionStatusLabel" layoutX="101.0" layoutY="310.0" prefHeight="31.0" prefWidth="391.0" text="" />
-                <Button fx:id="findRecyclageButton" defaultButton="true" layoutX="168.0" layoutY="357.0" onAction="#handleFindRecyclage" text="Recherchez les points de Recyclage">
+        <Label fx:id="collectionStatusLabel" layoutX="113.0" layoutY="263.0" prefHeight="31.0" prefWidth="391.0" text="" />
+                <Button fx:id="findRecyclageButton" defaultButton="true" layoutX="164.0" layoutY="305.0" onAction="#handleFindRecyclage" text="Recherchez les points de Recyclage">
          <font>
             <Font name="Arial" size="15.0" />
          </font></Button>
@@ -77,12 +76,23 @@
                     <Label fx:id="positionLabel" />
                 </VBox>
 
-                <ImageView fitHeight="118.0" fitWidth="143.0" layoutY="383.0" opacity="10" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="118.0" fitWidth="143.0" layoutX="396.0" layoutY="405.0" opacity="10" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@Capture%20d'écran%202024-02-28%20061039.png" />
                     </image>
                 </ImageView>
+      <Button fx:id="reclamation" defaultButton="true" layoutX="166.0" layoutY="377.0" mnemonicParsing="false" onAction="#sendReclamation" prefHeight="26.0" prefWidth="211.0" text="Si vous avez réclamation">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
 
+        <Button fx:id="calendrier" defaultButton="true" layoutX="164.0" layoutY="223.0" onAction="#handleCalendrier" prefHeight="27.0" prefWidth="264.0" text="Consulter calendrier de ramassage">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+
+      <!--Button fx:id="submit1" layoutX="166.0" layoutY="413.0" mnemonicParsing="false" onAction="#user_restore" text="Submit" /-->
 
     </children>
 </AnchorPane>

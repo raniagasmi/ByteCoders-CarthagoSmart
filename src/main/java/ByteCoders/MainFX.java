@@ -17,6 +17,7 @@ public class MainFX extends Application {
         //FXMLLoader loader = new FXMLLoader(getClass().getResource("/gestion_dechets.fxml"));
         //FXMLLoader loader = new FXMLLoader(getClass().getResource("/calendrier_dechets.fxml"));
         //FXMLLoader loader = new FXMLLoader(getClass().getResource("/gestionDECHETS.fxml"));
+        //FXMLLoader loader = new FXMLLoader(getClass().getResource("/reclamation_dechets.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setTitle("CarthagoSmart");

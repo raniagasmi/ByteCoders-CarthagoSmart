@@ -54,5 +54,7 @@
       <Button fx:id="btnModifier" layoutX="184.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="106.0" text="Modifier" />
       <Button fx:id="btnSupprimer" layoutX="336.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="106.0" text="Supprimer" />
        <TextField fx:id="search" alignment="CENTER" layoutX="488.0" layoutY="24.0" promptText="Rechercher" />
+       <Button text="Trier" onAction="#handleTriParCategorie" />
+
    </children>
 </AnchorPane>
