@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.EmailController">
+   <children>
+      <Button fx:id="mail" layoutX="125.0" layoutY="94.0" mnemonicParsing="false" onAction="#sendButtonClicked" text="Button" />
+      <Button fx:id="retour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#retourEnArriére" text="Retour" />
+   </children>
+</AnchorPane>

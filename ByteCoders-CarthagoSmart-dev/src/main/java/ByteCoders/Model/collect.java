@@ -1,7 +1,6 @@
 package ByteCoders.Model;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,6 +12,8 @@ public class collect {
     private String DateRamassage;
     private String PointRecyclage;
 
+    public static List<collect> collectList = new ArrayList<>();
+
     public collect(int typeId, String nomType, Categorie categorie, String PointRamassage, String DateRamassage, String PointRecyclage) {
         this.typeId = typeId;
         this.nomType = nomType;
@@ -23,14 +24,13 @@ public class collect {
     }
 
 
-    public static List<collect> collectList = new ArrayList<>();
     public collect(int typeId, String nomType, Categorie categorie) {
         this.typeId = typeId;
         this.nomType = nomType;
         this.categorie = categorie;
     }
 
-    public collect(String nomType, Categorie categorie) {
+    public collect(String nomType, Categorie categorie, String arina, String date, String s) {
         this.nomType = nomType;
         this.categorie = categorie;
     }
@@ -72,10 +72,6 @@ public class collect {
 
     }
 
-    public collect(String PointRamassage) {
-        this.PointRamassage = PointRamassage;
-    }
-
 
     public String getPointRamassage() {
         return PointRamassage;
@@ -100,6 +96,8 @@ public class collect {
     public void setPointRecyclage(String PointRecyclage) {
         this.PointRecyclage = PointRecyclage;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
