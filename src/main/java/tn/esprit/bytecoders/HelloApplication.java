@@ -47,6 +47,13 @@ public class HelloApplication extends Application {
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
 
+
+        // nb payee
+        // nb non payee
+        // nb total
+        // total payee
+        // total non payee
+
     }
 
     public static void main(String[] args) {
