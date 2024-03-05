@@ -4,6 +4,13 @@ module test {
 
     requires org.controlsfx.controls;
     requires java.sql;
+    requires java.mail;
+    requires com.google.zxing;
+    requires java.desktop;
+    requires com.google.zxing.javase;
+    requires activation;
+    requires org.apache.pdfbox;
+    requires javafx.swing;
 
     opens test to javafx.fxml;
     exports test;

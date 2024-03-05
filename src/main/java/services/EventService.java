@@ -57,6 +57,7 @@ public class EventService implements crud<Event> {
         preparedStatement.setFloat(7, event.getCout());
         preparedStatement.setInt(8, event.getId());
 
+
         preparedStatement.executeUpdate();
     }
 

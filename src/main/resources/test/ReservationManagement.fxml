@@ -6,38 +6,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReservationManagement">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReservationManagement">
    <children>
-      <Label layoutX="142.0" layoutY="47.0" prefHeight="32.0" prefWidth="290.0" text="Reservez vos Places" textAlignment="CENTER" textFill="#19427b">
+      <Label layoutX="149.0" layoutY="36.0" prefHeight="130.0" prefWidth="384.0" text="Reservez Vos Places" textAlignment="CENTER" textFill="#19427b">
          <font>
-            <Font name="Baskerville Old Face" size="26.0" />
+            <Font name="Bell MT" size="43.0" />
          </font>
       </Label>
-      <Label layoutX="6.0" layoutY="120.0" prefHeight="32.0" prefWidth="202.0" text=" Sélectionner un évenement" textAlignment="CENTER" textFill="#19427b">
+      <Label layoutX="14.0" layoutY="200.0" prefHeight="32.0" prefWidth="215.0" text=" Sélectionner un évenement" textAlignment="CENTER" textFill="#19427b">
          <font>
-            <Font name="Baskerville Old Face" size="16.0" />
+            <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="6.0" layoutY="162.0" prefHeight="32.0" prefWidth="202.0" text="Email" textAlignment="CENTER" textFill="#19427b">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="6.0" layoutY="200.0" prefHeight="32.0" prefWidth="202.0" text="Numéro de téléphone" textAlignment="CENTER" textFill="#19427b">
+      <Label layoutX="48.0" layoutY="271.0" prefHeight="32.0" prefWidth="202.0" text="Email" textAlignment="CENTER" textFill="#19427b">
          <font>
             <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="6.0" layoutY="245.0" prefHeight="32.0" prefWidth="202.0" text="Nombre de place" textAlignment="CENTER" textFill="#19427b">
+      <Label layoutX="48.0" layoutY="338.0" prefHeight="32.0" prefWidth="202.0" text="Numéro de téléphone" textAlignment="CENTER" textFill="#19427b">
          <font>
             <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtemail" layoutX="183.0" layoutY="166.0" />
-      <TextField fx:id="txtnumero" layoutX="183.0" layoutY="206.0" />
-      <TextField fx:id="txtnbr_place" layoutX="183.0" layoutY="248.0" />
-      <Button fx:id="confirmer" layoutX="177.0" layoutY="302.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="38.0" prefWidth="174.0" text="Confirmer votre Réservation" />
-      <TextField fx:id="txtnom_event" layoutX="189.0" layoutY="123.0" />
+      <Label layoutX="41.0" layoutY="405.0" prefHeight="32.0" prefWidth="202.0" text="Nombre de place" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtemail" layoutX="237.0" layoutY="264.0" prefHeight="46.0" prefWidth="174.0" />
+      <TextField fx:id="txtnumero" layoutX="237.0" layoutY="331.0" prefHeight="46.0" prefWidth="174.0" />
+      <TextField fx:id="txtnbr_place" layoutX="237.0" layoutY="398.0" prefHeight="45.0" prefWidth="174.0" />
+      <Button fx:id="confirmer" layoutX="250.0" layoutY="496.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="38.0" prefWidth="174.0" text="Confirmer votre Réservation" />
+      <TextField fx:id="txtnom_event" layoutX="237.0" layoutY="193.0" prefHeight="46.0" prefWidth="174.0" />
    </children>
 </AnchorPane>
