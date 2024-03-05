@@ -34,12 +34,12 @@
       </AnchorPane>
       <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="25.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/LOGO.png" />
+            <Image url="@../images/LOGO.png" />
          </image>
       </ImageView>
       <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="526.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/Account.png" />
+            <Image url="@../images/Account.png" />
          </image>
       </ImageView>
       <Text fx:id="username" layoutX="74.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENT" />

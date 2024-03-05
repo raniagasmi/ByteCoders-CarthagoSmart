@@ -47,15 +47,15 @@
       </AnchorPane>
       <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="25.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/LOGO.png" />
+            <Image url="@../images/LOGO.png" />
          </image>
       </ImageView>
       <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="526.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/Account.png" />
+            <Image url="@../images/Account.png" />
          </image>
       </ImageView>
-      <Button layoutX="74.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #199FDF;" text="Payer" textFill="WHITE">
+      <Button layoutX="74.0" layoutY="353.0"  mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #199FDF;" text="Payer" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>

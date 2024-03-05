@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="477.0" prefWidth="771.0" style="-fx-background-color:#FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.Paiement">
+    <AnchorPane layoutX="187.0" layoutY="22.0" prefHeight="32.0" prefWidth="398.0">
+        <children>
+            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="fact" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" textAlignment="CENTER" textFill="#487ef6">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+        </children>
+    </AnchorPane>
+    <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/LOGO.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="683.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/Account.png" />
+        </image>
+    </ImageView>
+
+    <!-- Titre -->
+    <Label layoutX="215.0" layoutY="82.0" style="-fx-font-size: 24px;     -fx-font-weight: bold;" text="Effectuer un Paiement" />
+
+    <!-- Référence de la Facture -->
+    <Label layoutX="95.0" layoutY="168.0" style="-fx-font-size: 14px;" text="Référence de la Facture :" />
+    <Label fx:id="refFactureLabel" layoutX="200" layoutY="70" style="-fx-font-size: 14px;" />
+
+    <!-- Montant à Payer -->
+    <Label layoutX="95.0" layoutY="219.0" style="-fx-font-size: 14px;" text="Montant à Payer :" />
+    <Label fx:id="montantLabel" layoutX="200" layoutY="100" style="-fx-font-size: 14px;" />
+
+    <!-- Mode de Paiement -->
+    <Label layoutX="95.0" layoutY="280.0" style="-fx-font-size: 14px;" text="Mode de Paiement :" />
+    <ComboBox fx:id="modePaiementComboBox" layoutX="270.0" layoutY="280.0" style="-fx-font-size: 14px;">
+    <items>
+        <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Carte de Crédit" />
+            <String fx:value="PayPal" />
+        </FXCollections>
+    </items>
+    </ComboBox>
+
+    <!-- Bouton de Paiement -->
+    <Button layoutX="277.0" layoutY="354.0" onAction="#handlePayment" style="-fx-font-size: 14px;     -fx-background-color: linear-gradient(to right, #6A97DB, #199FDF, #8D6ACE);     -fx-text-fill: white;" text="Payer Maintenant" />
+   <TextField fx:id="montantfield" layoutX="267.0" layoutY="216.0" promptText="montant" />
+
+</AnchorPane>

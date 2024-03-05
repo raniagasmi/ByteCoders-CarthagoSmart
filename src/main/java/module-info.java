@@ -5,6 +5,8 @@ module ByteCoders {
     requires javafx.controls;
     requires lombok;
     requires com.gluonhq.maps;
+    requires stripe.java;
+    requires controlsfx;
 
 
     opens ByteCoders to javafx.fxml;

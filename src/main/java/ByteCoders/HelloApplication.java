@@ -36,7 +36,7 @@ public class HelloApplication extends Application {
         }
 
 
-       FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("factureEAU.fxml"));
+       FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("paiement.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 620, 480);
         primaryStage.setTitle("CarthagoSmart");

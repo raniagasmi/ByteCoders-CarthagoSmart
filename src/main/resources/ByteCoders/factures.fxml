@@ -34,12 +34,12 @@
     </AnchorPane>
     <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../../../images/LOGO.png" />
+            <Image url="@../images/LOGO.png" />
         </image>
     </ImageView>
     <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="683.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../../../images/Account.png" />
+            <Image url="@../images/Account.png" />
         </image>
     </ImageView>
 
@@ -58,22 +58,22 @@
         </columns>
     </TableView>
 
-    <Button fx:id="ajouter" layoutX="128.0" layoutY="326.0" mnemonicParsing="false" onAction="#addFacture" style="-fx-background-color: #199FDF;" text="Ajouter" textAlignment="CENTER" textFill="WHITE">
+    <Button fx:id="ajouter" layoutX="128.0" layoutY="326.0" mnemonicParsing="false" onAction="#addFacture" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="Ajouter" textAlignment="CENTER" textFill="WHITE">
         <font>
             <Font name="Arial Black" size="12.0" />
         </font>
     </Button>
-    <Button fx:id="supprimer" layoutX="673.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteFacture" style="-fx-background-color: #199FDF;" text="Supprimer" textFill="WHITE">
+    <Button fx:id="supprimer" layoutX="673.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteFacture" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="Supprimer" textFill="WHITE">
         <font>
             <Font name="Arial Black" size="12.0" />
         </font>
     </Button>
-    <Button fx:id="reset" layoutX="43.0" layoutY="361.0" mnemonicParsing="false" onAction="#resetFacture" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #199FDF;" text="Réinitialiser" textFill="WHITE">
+    <Button fx:id="reset" layoutX="43.0" layoutY="361.0" mnemonicParsing="false" onAction="#resetFacture" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="Réinitialiser" textFill="WHITE">
         <font>
             <Font name="Arial Black" size="12.0" />
         </font>
     </Button>
-    <Button fx:id="modifier" layoutX="592.0" layoutY="269.0" mnemonicParsing="false" onAction="#updateFacture" style="-fx-background-color: #199FDF;" text="Modifier" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+    <Button fx:id="modifier" layoutX="592.0" layoutY="269.0" mnemonicParsing="false" onAction="#updateFacture" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="Modifier" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
         <font>
             <Font name="Arial Black" size="12.0" />
         </font>

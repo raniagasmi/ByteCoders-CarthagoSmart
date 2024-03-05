@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 
 import java.util.List;
 
-public class ConsommationController {
+public class StatisticsController {
 
     @FXML
     private BarChart<String, Number> barChart;
@@ -26,6 +26,14 @@ public class ConsommationController {
 
     @FXML
     private Label sumLabel, averageLabel, maxLabel, minLabel, numOfFacturesLabel;
+
+    /*public void initialize() {
+        // Initialiser les données de factures à partir du service
+        factures = fs.getAllFactures();
+
+        // Mettre à jour les statistiques
+        updateStats();
+    }*/
 
     // Méthode pour initialiser les statistiques
     public void initStats(double sum, double average, double max, double min, int numOfFactures) {
@@ -52,7 +60,7 @@ public class ConsommationController {
 
     public double getSum() {
         double sum = 0;
-    for (Facture facture : factures) {
+        for (Facture facture : factures) {
             sum += facture.getMontant();
         }
         return sum;

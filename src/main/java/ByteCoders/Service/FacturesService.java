@@ -1,7 +1,5 @@
 package ByteCoders.Service;
 
-
-
 import ByteCoders.Model.Facture;
 import ByteCoders.Model.TypeFacture;
 import ByteCoders.Service.IFacture;
@@ -36,8 +34,7 @@ public class FacturesService implements IFacture {
             System.out.println("Facture ajoutée avec succès!");
 
 
-
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -160,4 +157,20 @@ public class FacturesService implements IFacture {
         }
         return factures;
     }
+
+    public double getMontantFacture(int idFacture) {
+        double montant = 0;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT montant FROM facture WHERE id_facture = ?");
+            preparedStatement.setInt(1, idFacture);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                montant = rs.getDouble("montant");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return montant;
+    }
+
 }

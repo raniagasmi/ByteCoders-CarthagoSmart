@@ -1,0 +1,18 @@
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to right, #6A97DB, #199FDF, #8D6ACE);
+    -fx-text-fill: white;
+}
+
+.comboBox {
+    -fx-font-size: 14px;
+}
