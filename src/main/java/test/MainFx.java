@@ -16,8 +16,11 @@ public class MainFx extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
         // Charger la première interface
         FXMLLoader eventLoader = new FXMLLoader(MainFx.class.getResource("EventManagement.fxml"));
         Scene eventScene = new Scene(eventLoader.load(), 800, 600);
@@ -37,7 +40,11 @@ public class MainFx extends Application {
         Stage listeStage = new Stage();
         FXMLLoader listeLoader = new FXMLLoader(MainFx.class.getResource("ListeManagement.fxml"));
         Scene listeScene = new Scene(listeLoader.load(), 600, 400);
+<<<<<<< HEAD
         listeStage.setTitle("gestion des événements");
+=======
+        listeStage.setTitle("Liste de gestion");
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
         listeStage.setScene(listeScene);
         listeStage.show();
     }

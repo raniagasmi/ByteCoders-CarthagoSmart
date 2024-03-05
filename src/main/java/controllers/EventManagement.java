@@ -159,9 +159,13 @@ public class EventManagement {
            // Event event1 = new Event("Marathon", "sport", "2024-02-26", "10:00", "carthage", 500, 50.0f);
             //Event event2 = new Event("douz", "Culture", "2024-02-27", "9:00", "gbily", 4000, 75.0f);
             TableColumn<Event, Void> deleteColmn = new TableColumn<>("Supprimer");
+<<<<<<< HEAD
             TableColumn<Event, Void> qrCodeColumn = new TableColumn<>("Générer QR Code");
 
 
+=======
+           TableColumn<Event, Void> editColmn = new TableColumn<>("Modifier");
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
             EventService eventService = new EventService();
             try {
@@ -194,8 +198,12 @@ public class EventManagement {
                     return new DeleteButtonCell();
                 }
 
+<<<<<<< HEAD
             }
             );
+=======
+            });
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
             // Ajouter la colonne de boutons à la TableView
             tableView.getColumns().add(deleteColumn);

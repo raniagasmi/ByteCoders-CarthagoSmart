@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<<<<<<< HEAD
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -46,18 +47,40 @@
          </font>
       </Label>
       <TableView fx:id="tableView" layoutX="154.0" layoutY="247.0" prefHeight="450.0" prefWidth="560.0">
+=======
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListeManagement">
+   <children>
+      <Label layoutX="159.0" layoutY="21.0" text="Liste De Réservation" textFill="#4b378c">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="31.0" layoutY="192.0" prefHeight="200.0" prefWidth="483.0">
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
         <columns>
           <TableColumn fx:id="nom_event" prefWidth="75.0" text="nom_event" />
           <TableColumn fx:id="email" prefWidth="134.4000244140625" text="email" />
             <TableColumn fx:id="numero" prefWidth="80.79998779296875" text="numero" />
             <TableColumn fx:id="nbr_place" prefWidth="77.5999755859375" text="nbr_place" />
             <TableColumn fx:id="confirmationColumn" prefWidth="81.60003662109375" text="confirmationColumn" />
+<<<<<<< HEAD
             <TableColumn fx:id="codeQrColumn" prefWidth="108.0" text="CodeQr" />
         </columns>
       </TableView>
       <Button fx:id="trier" layoutX="578.0" layoutY="203.0" mnemonicParsing="false" onAction="#trier" text="Trier" />
       <TextField fx:id="searchTextField" layoutX="228.0" layoutY="208.0" onAction="#search" />
       <Label layoutX="128.0" layoutY="207.0" prefHeight="27.0" prefWidth="77.0" text="Chercher" textFill="#4b378c">
+=======
+        </columns>
+      </TableView>
+      <Button fx:id="trier" layoutX="286.0" layoutY="147.0" mnemonicParsing="false" onAction="#trier" text="Trier" />
+      <TextField fx:id="searchTextField" layoutX="120.0" layoutY="150.0" onAction="#search" />
+      <Label layoutX="31.0" layoutY="149.0" prefHeight="27.0" prefWidth="77.0" text="Chercher" textFill="#4b378c">
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
          <font>
             <Font size="18.0" />
          </font>

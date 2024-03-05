@@ -1,7 +1,10 @@
 package controllers;
 
 import com.google.zxing.BarcodeFormat;
+<<<<<<< HEAD
 import com.google.zxing.EncodeHintType;
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
@@ -12,12 +15,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+<<<<<<< HEAD
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import models.Reservation;
 import services.ReservationService;
 import javafx.embed.swing.SwingFXUtils;
 
+=======
+import models.Reservation;
+import services.ReservationService;
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
 import javax.imageio.ImageIO;
 import javax.mail.*;
@@ -33,8 +41,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Comparator;
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 import java.util.Properties;
 
 
@@ -55,11 +66,18 @@ public class ListeManagement {
     private TextField searchTextField;
     @FXML
     private TableColumn<Reservation, Void> confirmationColumn;
+<<<<<<< HEAD
     @FXML
     private TableColumn<Reservation, Void> codeQrColumn;
     private RenderedImage qrCodeImage;
 
 
+=======
+    private RenderedImage qrCodeImage;
+
+    public ListeManagement() throws WriterException {
+    }
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
     @FXML
     void initialize() {
@@ -89,7 +107,10 @@ public class ListeManagement {
                     // Envoyer un e-mail de confirmation à l'adresse e-mail de cette réservation
                     sendConfirmationEmail(reservation.getEmail());
                 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
             }
 
             @Override
@@ -103,6 +124,7 @@ public class ListeManagement {
             }
         });
 
+<<<<<<< HEAD
         // Configurer la colonne de code QR pour afficher des boutons
         codeQrColumn.setCellFactory(param -> new TableCell<>() {
             private final Button qrButton = new Button("Générer Code QR");
@@ -127,6 +149,8 @@ public class ListeManagement {
             }
         });
 
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
         // Assigner la liste observable à la TableView
         tableView.setItems(reservationData);
 
@@ -134,6 +158,7 @@ public class ListeManagement {
 
         });
     }
+<<<<<<< HEAD
 
     private void generateQRCode(Reservation reservation) { // Générer le contenu du code QR avec les données de la réservation
         String qrContent = "Nom de l'événement : " + reservation.getNom_event() + "\n" +
@@ -184,6 +209,9 @@ public class ListeManagement {
             errorAlert.showAndWait();
         }
     }
+=======
+  
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
 
     private void sendConfirmationEmail(String recipientEmail) {

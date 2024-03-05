@@ -10,7 +10,10 @@ module test {
     requires com.google.zxing.javase;
     requires activation;
     requires org.apache.pdfbox;
+<<<<<<< HEAD
     requires javafx.swing;
+=======
+>>>>>>> 778c81c01ff00e182c43909c38ef7e747f667aea
 
     opens test to javafx.fxml;
     exports test;
