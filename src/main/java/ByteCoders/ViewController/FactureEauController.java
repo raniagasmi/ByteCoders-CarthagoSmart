@@ -1,5 +1,6 @@
 package ByteCoders.ViewController;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +13,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class FactureEauController {
 
@@ -156,5 +162,47 @@ public class FactureEauController {
 
     public void onCheckboxCheck(ActionEvent actionEvent) {
         addToTableView(search.getText());
+    }
+
+    public void handlePayer(ActionEvent actionEvent) throws IOException {
+        FactureModel factureModel = tab.getSelectionModel().getSelectedItem();
+
+
+        Parent root = FXMLLoader.load(getClass().getResource("/paiementCopie.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+        if (factureModel != null) {
+
+
+
+
+
+
+
+/*
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("paiementCopie.fxml"));
+            Parent targetRoot = loader.load();
+
+            PaiementController paiementController = loader.getController();
+
+
+            paiementController.setFactureId(factureModel.getId_facture() + "");
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(targetRoot));
+            stage.show();
+* */
+
+
+
+
+
+
+        }
+
+
     }
 }

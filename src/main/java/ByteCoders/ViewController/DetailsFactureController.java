@@ -3,7 +3,6 @@ package ByteCoders.ViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import jdk.internal.icu.text.UCharacterIterator;
 import org.w3c.dom.Document;
 
 import java.io.FileNotFoundException;

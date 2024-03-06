@@ -4,33 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="add modifs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/PaiementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/DetailsFactureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Paiement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementController_copie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/StatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiementCopie.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/userStatistics.fxml" afterDir="false" />
+    <list default="true" id="abbbefc4-689b-481c-85be-9813afe2abc1" name="Changes" comment="add paiement_API">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/CreditCardValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/Accueil.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/americanexpress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/carderror.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/fond-banniere-cloud-computing-pour-ville-intelligente 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mastercard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/vase.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e7303c3-b053-4199-846e-e2242b2c4333.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6e7303c3-b053-4199-846e-e2242b2c4333.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e7303c3-b053-4199-846e-e2242b2c4333/storage_v2/_src_/schema/pi.-Q0AAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6e7303c3-b053-4199-846e-e2242b2c4333/storage_v2/_src_/schema/pi.-Q0AAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/Paiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Model/Paiement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/FacturesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/FacturesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/ConsommationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/ConsommationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FacturesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FacturesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FactureEauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/FactureEauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Paiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Paiement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/Consommation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/Consommation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/detailsFacture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/detailsFacture.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementController_copie.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/factureEAU.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/factureEAU.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/factures.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/factures.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/menuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/menuPrincipal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiementCopie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ByteCoders/paiementCopie.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ByteCoders/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Gestion__Energies",
     "last_directory_selection": "C:/dev/projet-git/ByteCoders-CarthagoSmart/src/main/java/tn/esprit/bytecoders",
-    "last_opened_file_path": "C:/dev/projet-git/ByteCoders-CarthagoSmart - Copie/src/main/resources/ByteCoders",
+    "last_opened_file_path": "C:/dev/projet-git/final copy/ByteCoders-CarthagoSmart - Copie",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -121,6 +115,8 @@
       <recent name="C:\dev\bytecoders\src\main\resources\tn\esprit\bytecoders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\projet-git\ByteCoders-CarthagoSmart - Copie\src\main\java\ByteCoders\assets" />
+      <recent name="C:\dev\projet-git\ByteCoders-CarthagoSmart - Copie\src\main\resources\images" />
       <recent name="C:\dev\projet-git\ByteCoders-CarthagoSmart\src\main\resources\tn\esprit\bytecoders" />
       <recent name="C:\dev\bytecoders\src\main\resources\images" />
       <recent name="C:\dev\bytecoders\src\main\java\tn\esprit\bytecoders\controllers" />
@@ -195,7 +191,10 @@
       <workItem from="1709599391827" duration="1851000" />
       <workItem from="1709601304268" duration="1563000" />
       <workItem from="1709604024976" duration="132000" />
-      <workItem from="1709631083628" duration="8015000" />
+      <workItem from="1709631083628" duration="9363000" />
+      <workItem from="1709649584939" duration="10475000" />
+      <workItem from="1709674385565" duration="16000" />
+      <workItem from="1709674423264" duration="11765000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -245,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709549071291</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add paiement_API">
+      <option name="closed" value="true" />
+      <created>1709647726316</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709647726316</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +287,7 @@
     <MESSAGE value="change facture entity attribute" />
     <MESSAGE value="add dynamic search" />
     <MESSAGE value="add dynamic search_changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dynamic search_changes" />
+    <MESSAGE value="add paiement_API" />
+    <option name="LAST_COMMIT_MESSAGE" value="add paiement_API" />
   </component>
 </project>

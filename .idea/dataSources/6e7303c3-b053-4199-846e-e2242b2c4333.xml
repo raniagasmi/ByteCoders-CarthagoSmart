@@ -1121,8 +1121,8 @@
       <CollationName>utf8_bin</CollationName>
     </schema>
     <schema id="330" parent="1" name="pi">
-      <IntrospectionTimestamp>2024-03-05.01:47:25</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-03-04.23:47:25</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-03-05.16:42:44</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-03-05.14:42:44</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="331" parent="1" name="test">
@@ -1155,7 +1155,7 @@
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="340" parent="330" name="user">
+    <table id="340" parent="330" name="user1">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
@@ -1193,7 +1193,7 @@
     <foreign-key id="347" parent="337" name="consommation_ibfk_1">
       <ColNames>userId</ColNames>
       <RefColNames>id_user</RefColNames>
-      <RefTableName>user</RefTableName>
+      <RefTableName>user1</RefTableName>
     </foreign-key>
     <index id="348" parent="337" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -1210,7 +1210,7 @@
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="351" parent="338" name="id_facture">
-      <AutoIncrement>462</AutoIncrement>
+      <AutoIncrement>1023</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1248,7 +1248,7 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_user</RefColNames>
-      <RefTableName>user</RefTableName>
+      <RefTableName>user1</RefTableName>
     </foreign-key>
     <index id="360" parent="338" name="PRIMARY">
       <ColNames>id_facture</ColNames>
