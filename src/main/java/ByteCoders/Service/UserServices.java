@@ -548,6 +548,17 @@ public class UserServices implements IService<User> {
             ps.executeUpdate();
         }
 
+    public void InvertStatus(String email) throws SQLException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
+        String query = "UPDATE user SET Status = ?  WHERE addEmail = ?";
+        PreparedStatement ps = cnx.prepareStatement(query);
+        if (getByEmail(email).getStatus()) {
+            ps.setBoolean(1, false);
+        } else {
+            ps.setBoolean(1, true);
+        }
+        ps.setString(2,email);
+        ps.executeUpdate();
+    }
 }
 
 

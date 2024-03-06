@@ -15,27 +15,38 @@ public class MenuPrincipalController {
     public void handleacceuil(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
         Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
 
     }
+
     @FXML
     public void handledechets(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/gestionDECHETS.fxml"));
         Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
 
     }
+
     @FXML
     public void handleevent(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/ReservationManagement.fxml"));
         Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
 
     }
+@FXML
+    public void handleFacture(ActionEvent event) throws IOException{
+    Parent root = FXMLLoader.load(getClass().getResource("/factureEAU.fxml"));
+    Scene scene = new Scene(root);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    window.setScene(scene);
+    window.show();
+
+}
 }

@@ -28,6 +28,8 @@ public class User {
 
     private String confirmationCode;
     private Boolean isVerified ;
+    private boolean Status ;
+
 
 
 
@@ -239,11 +241,18 @@ public class User {
     public void setRoleUser(Roles roleUser) {
           this.roleUser = roleUser;
       }
-/*
-      public void setEtatUser(Status etatUser) {
-          this.etatUser = etatUser;
-      }
-  */
+
+    public void setStatus(boolean status) {
+        Status = status;
+    }
+
+    public boolean getStatus() {
+        return Status;
+    }
+    public boolean isStatus() {
+        return Status;
+    }
+
     public int getId() {
         return id;
     }

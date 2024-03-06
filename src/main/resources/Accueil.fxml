@@ -42,11 +42,11 @@
                   <Image url="@images/LOGO.png" />
                </image>
             </ImageView>
-                <Button fx:id="homeButton" layoutX="40.0" layoutY="200.0" prefHeight="57.0" prefWidth="224.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="ACCUEIL" textFill="WHITE" >
+                <!--Button fx:id="homeButton" layoutX="40.0" layoutY="200.0" prefHeight="57.0" prefWidth="224.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="ACCUEIL" textFill="WHITE" >
                <font>
                   <Font size="13.0" />
                </font>
-            </Button>
+            </Button-->
                 <Button fx:id="wasteButton" layoutX="36.0" layoutY="274.0" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="Dechet" textFill="WHITE" onAction="#gestiondechets"/>
                 <Button fx:id="invoiceButton" layoutX="34.0" layoutY="343.0" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="Facture" textFill="WHITE" onAction="#gestionfacture">
                <font>

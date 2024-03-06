@@ -11,12 +11,12 @@
 <AnchorPane prefHeight="477.0" prefWidth="771.0" style="-fx-background-color:#FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.Paiement">
     <AnchorPane layoutX="187.0" layoutY="22.0" prefHeight="32.0" prefWidth="398.0">
         <children>
-            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleacceuil">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
             </Button>
-            <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets">
+            <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" onAction="#handledechet">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
@@ -26,7 +26,7 @@
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
             </Button>
-            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" onAction="#handleevent">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>

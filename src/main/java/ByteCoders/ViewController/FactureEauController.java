@@ -1,7 +1,9 @@
 package ByteCoders.ViewController;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.EventObject;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -12,10 +14,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
+
 
 public class FactureEauController {
 
@@ -71,6 +82,9 @@ public class FactureEauController {
 
     @FXML
     private Text username;
+
+    @FXML
+    private Button payer;
 
     // tableView items
     @FXML
@@ -157,4 +171,79 @@ public class FactureEauController {
     public void onCheckboxCheck(ActionEvent actionEvent) {
         addToTableView(search.getText());
     }
+
+    /*@FXML
+    public void handlePayer(ActionEvent actionEvent) throws IOException {
+        FactureModel factureModel = tab.getSelectionModel().getSelectedItem();
+
+        //FXMLLoader loader = new FXMLLoader((getClass().getResource("/ByteCoders/main.fxml")));
+        Parent root = FXMLLoader.load(getClass().getResource("/ByteCoders/paiement.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();*/
+
+    @FXML
+    public void handlePayer(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/paiement.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+
+
+
+
+
+
+/*
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("paiementCopie.fxml"));
+            Parent targetRoot = loader.load();
+
+            PaiementController paiementController = loader.getController();
+
+
+            paiementController.setFactureId(factureModel.getId_facture() + "");
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(targetRoot));
+            stage.show();
+* */
+
+
+
+
+
+
+        }
+    @FXML
+    public void handleacceuil(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handledechet(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/gestionDECHETS.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handleevent(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/ReservationManagement.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
 }
+

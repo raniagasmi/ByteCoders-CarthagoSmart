@@ -37,7 +37,7 @@ import java.sql.SQLException;
 public class SignInUp {
 
     @FXML
-    private AnchorPane MainPane;
+    public AnchorPane MainPane;
 
     @FXML
     private AnchorPane leftPane;
@@ -402,7 +402,33 @@ public class SignInUp {
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(scene);
                 window.show();
-            } else /*if (!u.getRoleUser().equals(Roles.ADMIN))*/{
+            } else if (u.getRoleUser().equals(Roles.RESPONSABLE_DECHETS)){
+                System.out.println(u.getRoleUser());
+                Parent root = FXMLLoader.load(getClass().getResource("/responsable_dechets.fxml"));
+                Scene scene = new Scene(root);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(scene);
+                window.show();
+            }
+            else if (u.getRoleUser().equals(Roles.RESPONSABLE_ENERGIES)){
+                System.out.println(u.getRoleUser());
+                Parent root = FXMLLoader.load(getClass().getResource("/factures.fxml"));
+                Scene scene = new Scene(root);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(scene);
+                window.show();
+            } else if (u.getRoleUser().equals(Roles.ORGANISATEURS)){
+                System.out.println(u.getRoleUser());
+                Parent root = FXMLLoader.load(getClass().getResource("/EventManagement.fxml"));
+                Scene scene = new Scene(root);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(scene);
+                window.show();
+            }
+            else if (u.getRoleUser().equals(Roles.MEMBRE)){
                 System.out.println(u.getRoleUser());
                 Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
                 Scene scene = new Scene(root);
@@ -411,6 +437,7 @@ public class SignInUp {
                 window.setScene(scene);
                 window.show();
             }
+
             //à ouvrir
            //  TwilioSmsSender.sendSms(u.getNumTlfn(), "Hello " + u.getNom() + ", you have successfully logged in.");
         } else {

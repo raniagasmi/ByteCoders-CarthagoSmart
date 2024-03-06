@@ -25,11 +25,15 @@ public class MainFX extends Application {
         //FXMLLoader loader = new FXMLLoader((getClass().getResource("/MDP.fxml")));
 
         //FXMLLoader loader = new FXMLLoader((getClass().getResource("/Code.fxml")));
+
         //FXMLLoader loader = new FXMLLoader(getClass().getResource("/Accueil.fxml"));
+
         //FXMLLoader loader = new FXMLLoader((getClass().getResource("/EventManagement.fxml")));
         //FXMLLoader loader = new FXMLLoader((getClass().getResource("/ReservationManagement.fxml")));
         FXMLLoader loader = new FXMLLoader((getClass().getResource("/SignInUp.fxml")));
         //FXMLLoader loader = new FXMLLoader((getClass().getResource("/menuPrincipal.fxml")));
+        //FXMLLoader loader = new FXMLLoader((getClass().getResource("/factureEAU.fxml")));
+
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setTitle("CarthagoSmart");

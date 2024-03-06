@@ -10,7 +10,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="771.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.FacturesController">
     <AnchorPane layoutX="187.0" layoutY="22.0" prefHeight="32.0" prefWidth="398.0">
         <children>
-            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+            <!--Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
@@ -19,17 +19,17 @@
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
-            </Button>
+            </Button-->
             <Button fx:id="fact" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" textAlignment="CENTER" textFill="#487ef6">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
             </Button>
-            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+            <!--Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="13.0" />
                 </font>
-            </Button>
+            </Button-->
         </children>
     </AnchorPane>
     <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">

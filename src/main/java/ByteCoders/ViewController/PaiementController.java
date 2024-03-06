@@ -8,10 +8,17 @@ import com.stripe.param.PaymentIntentCreateParams;
 import com.stripe.param.PaymentMethodCreateParams;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import lombok.Getter;
+
+import java.io.IOException;
 
 public class PaiementController {
 
@@ -31,7 +38,7 @@ public class PaiementController {
     private String factureId;
 
     @FXML
-    private void createP(ActionEvent event) {
+    private void createP(ActionEvent event) throws IOException {
         try {
             Stripe.apiKey = "sk_test_51OpYc6CgjBGw1mqPMm9JLvqAwMmjMLT286AdPq7JqiS0IEXWD82gibIN06nbSMZDqMxFpeGRgDiDISwIZT6I1GVo00K1eK22ei";
 
@@ -60,6 +67,12 @@ public class PaiementController {
             alert.showAndWait();
         }
 
+        Parent root = FXMLLoader.load(getClass().getResource("/paiementCopie.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
     }
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -68,6 +81,41 @@ public class PaiementController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+    @FXML
+    public void handleFacture(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/factureEAU.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
 
+    }
+    @FXML
+    public void handleacceuil(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handledechet(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/gestionDECHETS.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handleevent(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/ReservationManagement.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
 
 }

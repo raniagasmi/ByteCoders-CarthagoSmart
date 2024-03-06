@@ -48,7 +48,7 @@
                   <Image url="@images/eau.png" />
                </image>
             </ImageView>
-            <Button layoutX="19.0" layoutY="173.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="161.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="EAU" textFill="WHITE">
+            <Button layoutX="19.0" layoutY="173.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="161.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="EAU" textFill="WHITE" onAction="#handleFacture">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
@@ -62,7 +62,7 @@
                   <Image url="@images/energie.png" />
                </image>
             </ImageView>
-            <Button layoutX="25.0" layoutY="175.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="ENERGIE" textFill="WHITE" />
+            <Button layoutX="25.0" layoutY="175.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));" text="ENERGIE" textFill="WHITE" onAction="#handleFacture" />
          </children>
       </AnchorPane>
    </children>

@@ -96,7 +96,7 @@ public class ReservationManagement {
     }
     @FXML
     public void handlefacture(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/menuPrincipal.fxml.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/menuPrincipal.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);

@@ -2,7 +2,6 @@ package ByteCoders.ViewController;
 
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
-import com.stripe.model.Charge;
 import com.stripe.model.PaymentIntent;
 import com.stripe.param.PaymentIntentCreateParams;
 import javafx.event.ActionEvent;
@@ -25,12 +24,11 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 import org.controlsfx.control.Notifications;
 
-public class Paiement implements Initializable {
+public class PaiementCopieController implements Initializable {
     public ImageView card_icon;
     public Image card_icon_image;
     public ImageView card_mastercard_icon;
@@ -167,32 +165,14 @@ public class Paiement implements Initializable {
         }
 
     }
+
     @FXML
-    public void handleacceuil(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
+    public void handleFacture(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/ByteCoders/menuPrincipal.fxml"));
         Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
-
     }
-    @FXML
-    public void handledechet(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/gestionDECHETS.fxml"));
-        Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-
-    }
-    @FXML
-    public void handleevent(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/ReservationManagement.fxml"));
-        Scene scene = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-
-    }
-
 }

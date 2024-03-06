@@ -14,11 +14,11 @@
                <Image url="@../images/LOGO.png" />
            </image>
        </ImageView>
-       <Button fx:id="accueil" layoutX="303.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleAcceuil">
+       <!--Button fx:id="accueil" layoutX="303.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleAcceuil">
            <font>
                <Font name="Arial Rounded MT Bold" size="13.0" />
            </font>
-       </Button>
+       </Button-->
        <Button fx:id="evenements" layoutX="563.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" textFill="#0f48cd" onAction="#event">
            <font>
                <Font name="Arial Rounded MT Bold" size="13.0" />
