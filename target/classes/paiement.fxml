@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="822.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.PaiementController">
+    <children>
+        <AnchorPane layoutX="187.0" layoutY="22.0" prefHeight="32.0" prefWidth="398.0">
+            <children>
+                <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleacceuil">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" onAction="#handledechet">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="fact" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" textAlignment="CENTER" textFill="#487ef6" onAction="#handleFacture">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" onAction="#handleevent">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/LOGO.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="683.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Account.png" />
+            </image>
+        </ImageView>
+
+        <Button fx:id="payButton" layoutX="333.0" layoutY="243.0" mnemonicParsing="false" onAction="#createP" prefHeight="25.0" prefWidth="149.0" style="-fx-font-size: 14px;     -fx-background-color: linear-gradient(to right, #6A97DB, #199FDF, #8D6ACE);     -fx-text-fill: white;" text="Payer "/>
+        <TextField fx:id="Mpaiement" layoutX="333.0" layoutY="152.0" />
+        <TextField fx:id="Montant" layoutX="333.0" layoutY="196.0" />
+        <Text layoutX="187.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode de paiement :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Text>
+        <Text layoutX="187.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montant à payer :" wrappingWidth="128.9394531250001">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Text>
+        <!--<Button layoutX="72.0" layoutY="127.0" mnemonicParsing="false" onAction="#remise" text="remise" />-->
+
+
+    </children>
+</Pane>

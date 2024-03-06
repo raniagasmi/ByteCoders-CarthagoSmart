@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f92e12c8-c8db-4bfd-9479-f3a0490c2f0f" name="Changes" comment="ajout calendrier et reclamation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/CreditCardValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/PaiementCopieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/city.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/java/ByteCoders/controllers/Afficher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/java/ByteCoders/controllers/loglog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/java/ByteCoders/controllers/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/resources/Afficher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/resources/log-out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Carthago/src/main/resources/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/MainFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/MyDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/Service/MyDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Responsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/Responsable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/gestion_dechets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/gestion_dechets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/responsable_dechets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/responsable_dechets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MainU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Carthago/src/main/java/ByteCoders/controllers/sample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Carthago/src/main/resources/sample.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="RESET_MODE" value="KEEP" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SarraRejeb&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9735285c-6e9b-4d4b-8c0f-c252b9379f95" />
+        <option name="url" value="https://github.com/raniagasmi/ByteCoders-CarthagoSmart.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cyxR4EJc9OsXVIBCvfyYLqO6me" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Gestion__Dechets",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/RANIA/IdeaProjects/ByteCoders-CarthagoSmart-Integration/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ByteCoders.ViewController" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RANIA\IdeaProjects\ByteCoders-CarthagoSmart-Integration\src\main\resources" />
+      <recent name="C:\Users\RANIA\IdeaProjects\ByteCoders-CarthagoSmart-Integration\src\main\java\ByteCoders\ViewController" />
+      <recent name="C:\Users\RANIA\IdeaProjects\ByteCoders-CarthagoSmart-Integration\src\main\resources\images" />
+      <recent name="C:\Users\RANIA\IdeaProjects\ByteCoders-CarthagoSmart-Integration\src\main\java\ByteCoders\Service" />
+      <recent name="F:\ByteCoders-CarthagoSmart-Integration\src\main\java\ByteCoders\Model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ByteCoders.MainFX" />
+      <module name="_1erAtelier" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ByteCoders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainFX" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f92e12c8-c8db-4bfd-9479-f3a0490c2f0f" name="Changes" comment="" />
+      <created>1709097608576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709097608576</updated>
+      <workItem from="1709097609637" duration="6075000" />
+      <workItem from="1709244592639" duration="819000" />
+      <workItem from="1709245752724" duration="22017000" />
+      <workItem from="1709378591528" duration="29472000" />
+      <workItem from="1709482854416" duration="59082000" />
+      <workItem from="1709646873989" duration="689000" />
+      <workItem from="1709652203318" duration="646000" />
+      <workItem from="1709656387535" duration="3625000" />
+      <workItem from="1709663795504" duration="38586000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit-2">
+      <option name="closed" value="true" />
+      <created>1709328427816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709328427816</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ajout calendrier et reclamation">
+      <option name="closed" value="true" />
+      <created>1709549242124</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709549242124</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="14f6b0bf-8a62-44d9-b5ef-94ae6bd6c5db" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="14f6b0bf-8a62-44d9-b5ef-94ae6bd6c5db">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="commit-2" />
+    <MESSAGE value="ajout calendrier et reclamation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout calendrier et reclamation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ByteCoders/ViewController/EmailController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

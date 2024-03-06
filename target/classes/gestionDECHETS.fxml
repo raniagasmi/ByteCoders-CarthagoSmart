@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="submit" prefHeight="720" prefWidth="1060.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.gestion_dechets">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="311.0" layoutY="110.0" stroke="#0ea6cc00" strokeType="INSIDE" width="347.0">
+         <fill>
+            <LinearGradient endX="0.19417475728155342" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1f93ffb4" />
+                  <Stop color="#d3b8cb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-7.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1086.0" />
+        <ImageView fitHeight="89.0" fitWidth="175.0" layoutX="14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Plan%20de%20travail%201@3x.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="accueil" layoutX="247.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleacceuil">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="déchets" layoutX="413.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6" >
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="facture" layoutX="586.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" onAction="#handlefacture">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="evenements" layoutX="761.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" onAction="#handleevent">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font>
+                </Button>
+        <!--Button layoutX="429.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnNotifcationOnAction" prefHeight="40.0" prefWidth="138.0" text="Notification">
+            <font>
+                <Font name="Bell MT" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button-->
+                <Label layoutX="361.0" layoutY="117.0" prefHeight="31.0" prefWidth="261.0" text="Choisisez Votre Type de déchets" textFill="#FFFFEA">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Label>
+                <ComboBox fx:id="TypeDechetsComboBox" layoutX="311.0" layoutY="153.0" prefHeight="31.0" prefWidth="347.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Non Recyclable" />
+                            <String fx:value="Recyclable" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <!--Label layoutX="64.0" layoutY="135.0" text="Votre Position" />
+                <TextField fx:id="positionField" layoutX="165.0" layoutY="128.0" mouseTransparent="true" prefHeight="31.0" prefWidth="258.0" /-->
+                <Button fx:id="findLocationsButton" cancelButton="true" defaultButton="true" layoutX="311.0" layoutY="208.0" onAction="#handleFindLocations" prefHeight="45.0" prefWidth="347.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Recherchez les points de ramassage" />
+                <!--DatePicker fx:id="datePicker" layoutX="167.0" layoutY="210.0" prefHeight="31.0" prefWidth="258.0" promptText="Sélectionnez la date" />
+                <Button fx:id="VerifierSIButton" defaultButton="true" layoutX="167.0" layoutY="263.0" onAction="#handleVerifierSI" prefHeight="31.0" prefWidth="268.0" text="Verifiez si un jour de ramassage">
+         <font>
+            <Font size="15.0" />
+         </font></Button-->
+
+        <Label fx:id="collectionStatusLabel" layoutX="324.0" layoutY="336.0" prefHeight="31.0" prefWidth="391.0" text="" />
+                <Button fx:id="findRecyclageButton" defaultButton="true" layoutX="311.0" layoutY="385.0" onAction="#handleFindRecyclage" prefHeight="45.0" prefWidth="347.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Recherchez les points de Recyclage" />
+                <VBox fx:id="adresse" layoutX="730.0" layoutY="126.0" prefHeight="271.0" prefWidth="301.0">
+                    <!-- Contenu de la carte (VBox) -->
+                    <Label fx:id="positionLabel" />
+                </VBox>
+
+                <ImageView fitHeight="179.0" fitWidth="259.0" layoutX="361.0" layoutY="541.0" opacity="10" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Capture%20d'écran%202024-02-28%20061039.png" />
+                    </image>
+                </ImageView>
+      <Button fx:id="reclamation" defaultButton="true" layoutX="311.0" layoutY="475.0" mnemonicParsing="false" onAction="#sendReclamation" prefHeight="45.0" prefWidth="347.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Si vous avez une réclamation" />
+        <!--Button fx:id="calendrier" defaultButton="true" layoutX="164.0" layoutY="223.0" onAction="#handleCalendrier" prefHeight="27.0" prefWidth="264.0" text="Consulter calendrier de ramassage">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button-->
+        <Button fx:id="calendrier" layoutX="311.0" layoutY="278.0" onAction="#handleCalendrier" prefHeight="45.0" prefWidth="347.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Consulter calendrier de ramassage" />
+
+      <!--Button fx:id="submit1" layoutX="166.0" layoutY="413.0" mnemonicParsing="false" onAction="#user_restore" text="Submit" /-->
+
+    </children>
+</AnchorPane>

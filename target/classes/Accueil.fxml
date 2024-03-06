@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="573.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.ControllerAccueil">
+    <children>
+        <!-- Background Image -->
+        <ImageView fitHeight="720.0" fitWidth="1280.0">
+            <image>
+                <!-- You need to replace 'background.jpg' with your actual image file path -->
+                <Image url="@images/city.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Top Menu Buttons -->
+        <HBox alignment="TOP_CENTER" layoutX="489.0" spacing="10" />
+
+        <!-- Main Text -->
+        <VBox alignment="CENTER" layoutY="200" />
+
+        <!-- Action Buttons -->
+        <HBox alignment="CENTER" layoutY="400" spacing="20" />
+          <Button fx:id="contactButton" layoutX="456.0" layoutY="503.0" prefHeight="30.0" prefWidth="233.0" style="-fx-background-radius: 20;" text="Contacter nous" />
+          <Button fx:id="aboutUsButton" layoutX="721.0" layoutY="506.0" style="-fx-background-radius: 20;" text="Qui sommes-nous?" />
+          <Text layoutX="604.0" layoutY="358.0" style="-fx-font-size: 34px; -fx-font-weight: bold; -fx-fill: white;" text="Eclairez votre ville">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="62.0" />
+         </font></Text>
+          <Text layoutX="620.0" layoutY="389.0" style="-fx-font-size: 24px; -fx-fill: white;" text="Allegez votre quotidien" />
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="722.0" prefWidth="310.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="95.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/LOGO.png" />
+               </image>
+            </ImageView>
+                <!--Button fx:id="homeButton" layoutX="40.0" layoutY="200.0" prefHeight="57.0" prefWidth="224.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="ACCUEIL" textFill="WHITE" >
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button-->
+                <Button fx:id="wasteButton" layoutX="36.0" layoutY="274.0" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="Dechet" textFill="WHITE" onAction="#gestiondechets"/>
+                <Button fx:id="invoiceButton" layoutX="34.0" layoutY="343.0" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="Facture" textFill="WHITE" onAction="#gestionfacture">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+                <Button fx:id="eventButton" layoutX="34.0" layoutY="411.0" prefHeight="50.0" prefWidth="233.0" style="-fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));-fx-background-radius: 20;" text="Événement" textFill="WHITE" onAction="#gestionevent">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+                <Button fx:id="loginButton" layoutY="671.0" prefHeight="51.0" prefWidth="310.0" style="-fx-background-color: #ae6ace;" text="CONNEXION" textAlignment="CENTER" textFill="#ae6ace">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

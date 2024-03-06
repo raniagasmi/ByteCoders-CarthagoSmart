@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.ListeManagement">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-14.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1090.0" />
+       <ImageView fitHeight="58.0" fitWidth="67.0" layoutX="29.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@../images/LOGO.png" />
+           </image>
+       </ImageView>
+       <!--Button fx:id="accueil" layoutX="303.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleAcceuil">
+           <font>
+               <Font name="Arial Rounded MT Bold" size="13.0" />
+           </font>
+       </Button-->
+       <Button fx:id="evenements" layoutX="563.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" textFill="#0f48cd" onAction="#event">
+           <font>
+               <Font name="Arial Rounded MT Bold" size="13.0" />
+           </font>
+
+       </Button>
+      <Label layoutX="205.0" layoutY="99.0" prefHeight="66.0" prefWidth="391.0" text="Liste De Réservation" textFill="#483291">
+         <font>
+            <Font name="Baskerville Old Face" size="34.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="154.0" layoutY="247.0" prefHeight="450.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="nom_event" prefWidth="75.0" text="nom_event" />
+          <TableColumn fx:id="email" prefWidth="134.4000244140625" text="email" />
+            <TableColumn fx:id="numero" prefWidth="80.79998779296875" text="numero" />
+            <TableColumn fx:id="nbr_place" prefWidth="77.5999755859375" text="nbr_place" />
+            <TableColumn fx:id="confirmationColumn" prefWidth="81.60003662109375" text="confirmationColumn" />
+            <TableColumn fx:id="codeQrColumn" prefWidth="108.0" text="CodeQr" />
+        </columns>
+      </TableView>
+      <Button fx:id="trier" layoutX="578.0" layoutY="203.0" mnemonicParsing="false" onAction="#trier" text="Trier" />
+      <TextField fx:id="searchTextField" layoutX="228.0" layoutY="208.0" onAction="#search" />
+      <Label layoutX="128.0" layoutY="207.0" prefHeight="27.0" prefWidth="77.0" text="Chercher" textFill="#4b378c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
