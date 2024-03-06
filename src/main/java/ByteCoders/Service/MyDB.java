@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
     public class MyDB{
-        final String URL = "jdbc:mysql://localhost:3306/carthagosmart";
+        final String URL = "jdbc:mysql://localhost:3306/pidev";
         final String USER = "root";
         final String pwd = "";
         private Connection cnx;

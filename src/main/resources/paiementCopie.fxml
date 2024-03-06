@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="771.0" style="-fx-background-color:#FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.Paiement">
+    <AnchorPane layoutX="187.0" layoutY="22.0" prefHeight="32.0" prefWidth="398.0">
+        <children>
+            <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="fact" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" textAlignment="CENTER" textFill="#487ef6">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                </font>
+            </Button>
+        </children>
+    </AnchorPane>
+    <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/LOGO.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="683.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/Account.png" />
+        </image>
+    </ImageView>
+
+    <!-- Titre -->
+    <Label layoutX="260.0" layoutY="82.0" style="-fx-font-size: 24px;     -fx-font-weight: bold;" text="Effectuer un Paiement" />
+
+    <!-- Référence de la Facture -->
+    <Label fx:id="ref_fact" layoutX="59.0" layoutY="141.0" style="-fx-font-size: 14px;" text="Référence de la Facture :" />
+    <Label fx:id="refFactureLabel" layoutX="200" layoutY="70" style="-fx-font-size: 14px;" />
+    <Label fx:id="montantLabel" layoutX="200" layoutY="100" style="-fx-font-size: 14px;" />
+
+    <!-- Bouton de Paiement -->
+    <Button layoutX="587.0" fx:id="payer" layoutY="400.0" onAction="#handlePayment" style="-fx-font-size: 14px;     -fx-background-color: linear-gradient(to right, #6A97DB, #199FDF, #8D6ACE);     -fx-text-fill: white;" text="Payer Maintenant" />
+   <TextField fx:id="card_number" layoutX="59.0" layoutY="181.0" prefHeight="26.0" prefWidth="251.0" promptText="Card Number" />
+   <TextField fx:id="month" layoutX="60.0" layoutY="226.0" prefHeight="26.0" prefWidth="59.0" promptText="Month" />
+   <TextField fx:id="year" layoutX="135.0" layoutY="226.0" prefHeight="26.0" prefWidth="77.0" promptText="Year" />
+   <TextField fx:id="cvc" layoutX="225.0" layoutY="226.0" prefHeight="26.0" prefWidth="86.0" promptText="CVC" />
+   <ImageView fitHeight="26.0" fx:id="card_error_icon" fitWidth="32.0" layoutX="320.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/carderror.jpg" />
+      </image>
+   </ImageView>
+
+    <ImageView fitHeight="26.0" fx:id="card_american_icon" fitWidth="32.0" layoutX="320.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/americanexpress.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fitHeight="26.0" fx:id="card_mastercard_icon" fitWidth="32.0" layoutX="320.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/mastercard.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fitHeight="26.0" fx:id="card_visa_icon" fitWidth="32.0" layoutX="320.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/vase.png" />
+        </image>
+    </ImageView>
+
+</AnchorPane>

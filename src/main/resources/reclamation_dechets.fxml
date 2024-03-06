@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.EmailController">
+<AnchorPane prefHeight="720" prefWidth="1060.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.EmailController">
    <children>
-      <Button fx:id="mail" layoutX="125.0" layoutY="94.0" mnemonicParsing="false" onAction="#sendButtonClicked" text="Button" />
-      <Button fx:id="retour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#retourEnArriére" text="Retour" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-14.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1090.0" />
+      <ImageView fitHeight="89.0" fitWidth="175.0" layoutX="14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Plan%20de%20travail%201@3x.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="accueil" layoutX="234.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="déchets" layoutX="393.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="facture" layoutX="570.0" layoutY="19.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="evenements" layoutX="730.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="mail1" layoutX="394.0" layoutY="524.0" mnemonicParsing="false" onAction="#sendButtonClicked1" prefHeight="103.0" prefWidth="285.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Ramassage d'encombrement" />
+      <Button fx:id="mail2" layoutX="715.0" layoutY="524.0" mnemonicParsing="false" onAction="#sendButtonClicked2" prefHeight="103.0" prefWidth="285.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Réclamer une incivilité " />
+      <Button fx:id="mail3" layoutX="78.0" layoutY="524.0" mnemonicParsing="false" onAction="#sendButtonClicked3" prefHeight="103.0" prefWidth="285.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Demande de Bac de TRI" />
+      <Button fx:id="retour" layoutY="707.0" mnemonicParsing="false" onAction="#retourEnArriére" prefHeight="45.0" prefWidth="89.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Retour" />
+      <ImageView fitHeight="260.0" fitWidth="200.0" layoutX="117.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/bac_de_tri.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="310.0" layoutX="371.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/encombrement.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="255.0" fitWidth="259.0" layoutX="723.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/incivilite.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -166,7 +166,8 @@ public class gestion_dechets {
     private Button findLocationsButton;
 
     private final MapPoint Tunisia = new MapPoint(36.80123306920609, 10.216339046924556);
-
+    private final MapPoint Ariana = new MapPoint(36.8012330, 10.216339);
+    private final MapPoint Sokra = new MapPoint(36.885888, 10.2487967);
     public void initialize() {
         // Désactive l'affichage initial du bouton de recyclage
         findRecyclageButton.setVisible(false);
@@ -210,6 +211,8 @@ public class gestion_dechets {
         mapView.addLayer(new CustomMapLayer());
         mapView.setZoom(10);
         mapView.flyTo(0, Tunisia, 0.1);
+        //mapView.flyTo(0, Ariana, 0.1);
+        //mapView.flyTo(0, Sokra, 0.1);
         return mapView;
     }
 
@@ -218,15 +221,20 @@ public class gestion_dechets {
         private final Node marker;
 
         public CustomMapLayer() {
-            marker = new Circle(8, Color.RED);
+            marker = new Circle(5, Color.RED);
             getChildren().add(marker);
         }
-
         @Override
         protected void layoutLayer() {
-            Point2D point = getMapPoint(Tunisia.getLatitude(), Tunisia.getLongitude());
-            marker.setTranslateX(point.getX());
-            marker.setTranslateY(point.getY());
+            Point2D point1 = getMapPoint(Tunisia.getLatitude(), Tunisia.getLongitude());
+            //Point2D point2 = getMapPoint(Ariana.getLatitude(), Ariana.getLongitude());
+            //Point2D point3 = getMapPoint(Sokra.getLatitude(), Sokra.getLongitude());
+            marker.setTranslateX(point1.getX());
+            marker.setTranslateY(point1.getY());
+            /*marker.setTranslateX(point2.getX());
+            marker.setTranslateY(point2.getY());
+            marker.setTranslateX(point3.getX());
+            marker.setTranslateY(point3.getY());*/
         }
     }
 
@@ -238,11 +246,18 @@ public class gestion_dechets {
         window.setScene(scene);
         window.show();
         ///NOTIFICATION///
-        Notifications notifications=Notifications.create();
-        notifications.text("Merci pour votre réclamation");
-        notifications.title("Notification");
-        notifications.hideAfter(Duration.seconds(4));
-        notifications.show();
+        try {
+            Notifications notificationBuilder = Notifications.create()
+                    .title("Notification")
+                    .text("Merci Pour votre reclamation")
+                    .graphic(null)
+                    .hideAfter(javafx.util.Duration.seconds(10)) // Notification disappears after 5 seconds
+                    .position(Pos.BOTTOM_RIGHT)
+                    .onAction(actionEvent -> System.out.println("Réclamation !"));
+            notificationBuilder.showConfirm();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -250,6 +265,33 @@ public class gestion_dechets {
     @FXML
     public void handleCalendrier(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/calendrier_dechets.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handleacceuil(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Accueil.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handlefacture(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/menuPrincipal.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
+    }
+    @FXML
+    public void handleevent(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/ReservationManagement.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);

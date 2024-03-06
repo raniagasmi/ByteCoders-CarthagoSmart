@@ -13,7 +13,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.sql.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import static ByteCoders.Model.collect.collectList;
 
 public class Responsable implements Initializable {
@@ -59,6 +62,14 @@ public class Responsable implements Initializable {
 
     @FXML
     private Button btnSupprimer;
+
+    @FXML
+    private RadioButton recyclableRadioButton;
+
+    @FXML
+    private RadioButton nonRecyclableRadioButton;
+
+
     private ObservableList<ByteCoders.Model.collect> collectList = FXCollections.observableArrayList();
 
 
@@ -76,8 +87,6 @@ public class Responsable implements Initializable {
             deleteRecord();
         }
     }
-    //TRI PAR CATEGORIE//
-
     private FilteredList<collect> filteredData = new FilteredList<>(FXCollections.observableArrayList());
 
     /*@Override
@@ -104,21 +113,48 @@ public class Responsable implements Initializable {
             afficher();
         }*/
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         afficher();
 
-        //addToTableView("");
-        search.textProperty().addListener((observable, oldVal, newVal) -> {
-            addToTableView(newVal);
-        });
+        // Set a default category filter
+        updateTableViewByCategory("Recyclable");
+        updateTableViewByCategory("Non Recyclable");
     }
+
+    @FXML
+    private ToggleGroup categoryToggleGroup;
+
+    @FXML
+    private void handleRadioButtonAction(ActionEvent event) {
+        RadioButton selectedRadioButton = (RadioButton) categoryToggleGroup.getSelectedToggle();
+
+        if (selectedRadioButton == recyclableRadioButton) {
+            String selectedCategory = selectedRadioButton.getText();
+            updateTableViewByCategory(selectedCategory);
+        }
+    }
+
+    private void updateTableViewByCategory(String selectedCategory) {
+        try {
+            filteredData.setPredicate(collect -> {
+                if (selectedCategory == null || selectedCategory.isEmpty()) {
+                    return true; // Show all items if no category is selected
+                }
+
+                // Check if the Categorie name matches the selected category (case-insensitive)
+                return collect.getCategorie().name().equalsIgnoreCase(selectedCategory);
+            });
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
 
     public Connection getCnx() throws SQLException {
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/carthagosmart", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pidev", "root", "");
             System.out.println("connection established");
             return con;
         } catch (SQLException ex) {
@@ -203,46 +239,31 @@ public class Responsable implements Initializable {
         afficher();
     }
 
-    //TRI PAR CATEGORIE//
-    @FXML
-    private void handleTriParCategorie(ActionEvent event) {
-        // Créer un Comparator pour trier d'abord par catégorie, puis par nomType en ordre décroissant
-        Comparator<collect> comparator = Comparator
-                .comparing(collect::getCategorie)
-                .thenComparing(collect::getNomType, String.CASE_INSENSITIVE_ORDER.reversed())
-                .thenComparing(collect::getPointRamassage, String.CASE_INSENSITIVE_ORDER.reversed())
-                .thenComparing(collect::getDateRamassage, String.CASE_INSENSITIVE_ORDER.reversed())
-                .thenComparing(collect::getPointRecyclage, String.CASE_INSENSITIVE_ORDER.reversed());
-
-        // Trier la liste observée associée à la TableView
-        tableView.getItems().sort(comparator.reversed());
-    }
-
-    @FXML
+   /* @FXML
     private TextField search;
-    /*public void addToTableView(String newVal) {
-
+    public void addToTableView(String newVal) {
         try {
-            collectList.clear();
-            List<collect> collection = collectList;
-            collection.removeIf(collect -> !collect.getCategorie().toString().equals(newVal));
-            System.out.println(collection);
-            for (collect item : collection) {
-                collectList.add(new collect(
-                        item.getTypeId(),
-                        item.getNomType(),
-                        item.getCategorie(),
-                        item.getPointRamassage(),
-                        item.getDateRamassage(),
-                        item.getPointRecyclage()
-                ));
-            }
+            filteredData.setPredicate(collect -> {
+                if (newVal == null || newVal.isEmpty()) {
+                    return true; // Show all items if the search text is empty
+                }
+
+                // Check if any of the fields in collect contain the search text
+                String lowerCaseFilter = newVal.toLowerCase();
+
+                return collect.getNomType().toLowerCase().contains(lowerCaseFilter) ||
+                        collect.getCategorie().toString().toLowerCase().contains(lowerCaseFilter) ||
+                        collect.getPointRamassage().toLowerCase().contains(lowerCaseFilter) ||
+                        collect.getDateRamassage().toLowerCase().contains(lowerCaseFilter) ||
+                        collect.getPointRecyclage().toLowerCase().contains(lowerCaseFilter);
+            });
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }*/
 
-    public void addToTableView(String newVal) {
+
+    /*public void addToTableView(String newVal) {
         try {
             collectList.clear();
 
@@ -262,14 +283,24 @@ public class Responsable implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }*/
+
+
+
+    //TRI PAR CATEGORIE//
+    @FXML
+    private void handleTriParCategorie(ActionEvent event) {
+        // Créer un Comparator pour trier d'abord par catégorie, puis par nomType en ordre décroissant
+        Comparator<collect> comparator = Comparator
+                .comparing(collect::getCategorie)
+                .thenComparing(collect::getNomType, String.CASE_INSENSITIVE_ORDER.reversed())
+                .thenComparing(collect::getPointRamassage, String.CASE_INSENSITIVE_ORDER.reversed())
+                .thenComparing(collect::getDateRamassage, String.CASE_INSENSITIVE_ORDER.reversed())
+                .thenComparing(collect::getPointRecyclage, String.CASE_INSENSITIVE_ORDER.reversed());
+
+        // Trier la liste observée associée à la TableView
+        tableView.getItems().sort(comparator.reversed());
     }
-
-    // Méthode utilitaire pour vérifier si une chaîne contient (ignorant la casse) une sous-chaîne
-    private boolean containsIgnoreCase(String fullString, String part) {
-        return fullString.toLowerCase().contains(part.toLowerCase());
-    }
-
-
 
     //mettre à jour la base de données
     private void executeQuery(String query) throws SQLException {
@@ -293,34 +324,4 @@ public class Responsable implements Initializable {
 
 
     }}
-
-
-
-
-
-/*Connection con = getCnx();
-    public List<collect> recuperer() throws SQLException {
-        List<collect> collects = new ArrayList<>();
-        String req = "SELECT * FROM collectdechets";
-        try (
-
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery(req);)
-        {while (rs.next()) {
-            int typeId = rs.getInt("typeId");
-            String nomType = rs.getString("nomType");
-            String categorieString = rs.getString("Categorie").replace(" ", "_").toUpperCase().trim();
-            ByteCoders.Model.Categorie categorie = ByteCoders.Model.Categorie.valueOf(categorieString);
-            String pointRamassage = rs.getString("PointRamassage");
-            String dateRamassage = rs.getString("DateRamassage");
-            String pointRecyclage = rs.getString("PointRecyclage");
-
-
-
-                collect Responsable = new collect(typeId, nomType, categorie, pointRamassage, dateRamassage, pointRecyclage);
-                collects.add(Responsable);
-            }
-        }
-        return collects;
-}*/
 

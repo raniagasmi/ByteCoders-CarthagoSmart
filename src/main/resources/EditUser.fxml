@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="modifierB" prefHeight="751.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.EditUserController">
+    <children>
+        <!--<ToggleButton fx:id="eyeToggle" layoutX="407.0" layoutY="394.0" onAction="#togglePasswordVisibility" prefHeight="39.0" prefWidth="42.0" />-->
+        <Label graphicTextGap="10.0" layoutX="86.0" layoutY="34.0" prefHeight="61.0" prefWidth="382.0" text="Modifier " textAlignment="CENTER">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Label>
+        <TextField fx:id="CinTF" layoutX="203.0" layoutY="111.0" />
+        <TextField fx:id="UsernameTF" layoutX="199.0" layoutY="251.0" />
+        <TextField fx:id="NumTlfnTF" layoutX="199.0" layoutY="296.0" />
+        <TextField fx:id="addMailTF" layoutX="199.0" layoutY="353.0" />
+        <Label layoutX="66.0" layoutY="115.0" text="CIN" />
+        <Label layoutX="58.0" layoutY="255.0" prefHeight="17.0" prefWidth="94.0" text="User_name" />
+        <Label layoutX="58.0" layoutY="300.0" text="Numéro de téléphone" />
+        <Label layoutX="58.0" layoutY="357.0" text="Adresse email" />
+        <Label layoutX="58.0" layoutY="404.0" text="Mot de passe" />
+        <Label fx:id="RoleTF" layoutX="58.0" layoutY="458.0" text="Role" />
+
+        <!--<Button fx:id="afficherbutton" layoutX="558.0" layoutY="690.0" mnemonicParsing="false" onAction="#ShowUser" text="Afficher" />
+        <Button fx:id="addButton" layoutX="482.0" layoutY="690.0" mnemonicParsing="false" onAction="#AddUser" text="Ajouter" />-->
+        <!-- <ImageView fx:id="profileImageView" fitHeight="117.0" fitWidth="94.0" layoutX="468.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@image.png" />
+            </image>
+         </ImageView>-->
+       <!-- <Button fx:id="chooseImageButton" layoutX="505.0" layoutY="196.0" mnemonicParsing="false" onAction="#addImage" text="choisir une image" />-->
+        <ComboBox fx:id="role" layoutX="197.0" layoutY="454.0" prefHeight="25.0" prefWidth="142.0" promptText="Role" />
+        <Label layoutX="56.0" layoutY="163.0" prefHeight="25.0" prefWidth="74.0" text="Nom" />
+        <Label layoutX="52.0" layoutY="213.0" text="Prenom" />
+        <TextField fx:id="NomTF" layoutX="203.0" layoutY="163.0" />
+        <TextField fx:id="PrenomTF" layoutX="199.0" layoutY="209.0" />
+        <PasswordField fx:id="MdpPF" layoutX="185.0" layoutY="384.0" prefHeight="48.0" prefWidth="185.0" />
+
+        <ImageView fx:id="eyeIcon" fitHeight="25.0" fitWidth="24.0" layoutX="416.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@eye.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="MdpTF" layoutX="191.0" layoutY="389.0" prefHeight="39.0" prefWidth="173.0" />
+      <Button fx:id="modifierBouton" layoutX="384.0" layoutY="620.0" mnemonicParsing="false" onAction="#modifier" prefHeight="67.0" prefWidth="142.0" text="Modifier" />
+      <TextField fx:id="confirmationCodeC" layoutX="194.0" layoutY="506.0" />
+      <Label layoutX="20.0" layoutY="510.0" prefHeight="17.0" prefWidth="149.0" text="code de confirmation" />
+      <Button fx:id="retour" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#retourPagePrecedente" text="Retour" />
+      <ImageView fx:id="urlImage" fitHeight="100.0" fitWidth="117.0" layoutX="455.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image.png" />
+         </image>
+      </ImageView>
+     <!-- <Button fx:id="chooseImageButton" layoutX="450.0" layoutY="239.0" mnemonicParsing="false" onAction="#addImage" text="choisir une image" />-->
+
+
+    </children>
+</AnchorPane>

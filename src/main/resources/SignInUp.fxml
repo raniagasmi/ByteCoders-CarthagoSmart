@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #cc9999;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.SignInUp">
+   <children>
+      <ImageView fitHeight="626.0" fitWidth="949.0" layoutX="327.0" layoutY="42.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@city.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="611.0" fitWidth="916.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@city.jpg" />
+         </image></ImageView>
+      <AnchorPane fx:id="leftPane" layoutX="40.0" layoutY="42.0" prefHeight="626.0" prefWidth="892.0" style="-fx-background-color: white;">
+         <children>
+            <Text fx:id="Seconnecterheader" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S'authentifier" textAlignment="CENTER" wrappingWidth="852.6708984375">
+               <font>
+                  <Font name="Comic Sans MS" size="55.0" />
+               </font>
+            </Text>
+            <TextField fx:id="user_name" layoutX="241.0" layoutY="178.0" prefHeight="59.0" prefWidth="482.0" promptText="Username">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="user_password" layoutX="240.0" layoutY="310.0" prefHeight="69.0" prefWidth="482.0" promptText="Mot De Passe" />
+            <Button fx:id="submit" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="436.0" mnemonicParsing="false" onAction="#user_login" prefHeight="31.0" prefWidth="482.0" styleClass="blue-btn" text="Se connecter" />
+            <Button fx:id="MDP" alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" layoutY="550.0" mnemonicParsing="false" onAction="#mdp" prefHeight="31.0" prefWidth="491.0" style="-fx-font-weight: bold; -fx-background-color: transparent;" text="Avez-vous oublié votre mot de passe" />
+            <Text fx:id="SeconnecterLabel1" layoutX="63.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER" wrappingWidth="266.0">
+             
+             
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fx:id="SeconnecterLabel2" layoutX="-28.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" textAlignment="CENTER" wrappingWidth="449.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="CinTF" layoutX="170.0" layoutY="122.0" visible="false" />
+            <Label fx:id="cin" layoutX="51.0" layoutY="127.0" text="CIN" visible="false" />
+            <Label fx:id="nom" layoutX="54.0" layoutY="182.0" prefHeight="25.0" prefWidth="74.0" text="Nom" visible="false" />
+            <TextField fx:id="NomTF" layoutX="186.0" layoutY="179.0" visible="false" />
+                  <ToggleButton fx:id="eyeToggle" layoutX="407.0" layoutY="394.0" onAction="#togglePasswordVisibility" prefHeight="39.0" prefWidth="42.0" visible="false">
+               <graphic>
+                  <ImageView fx:id="eyeIcon" fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+      <TextField fx:id="UsernameTF" layoutX="170.0" layoutY="285.0" visible="false" />
+      <TextField fx:id="NumTlfnTF" layoutX="186.0" layoutY="345.0" visible="false" />
+      <TextField fx:id="addMailTF" layoutX="182.0" layoutY="398.0" visible="false" />
+      <Label fx:id="username" layoutX="44.0" layoutY="282.0" prefHeight="17.0" prefWidth="94.0" text="User_name" visible="false" />
+      <Label fx:id="num" layoutX="38.0" layoutY="350.0" text="Numéro de téléphone" visible="false" />
+      <Label fx:id="email" layoutX="41.0" layoutY="402.0" text="Adresse email" visible="false" />
+      <Label fx:id="mdp" layoutX="59.0" layoutY="467.0" text="Mot de passe" visible="false" />
+      <Label fx:id="roleUser" layoutX="76.0" layoutY="531.0" text="Role" visible="false" />
+       <Button fx:id="addButton" layoutX="606.0" layoutY="535.0" mnemonicParsing="false" onAction="#AddUser" text="Ajouter" visible="false" />
+    
+      <Button fx:id="chooseImageButton" layoutX="639.0" layoutY="236.0" mnemonicParsing="false" onAction="#addImage" text="choisir une image" visible="false" />
+      <ComboBox fx:id="role" layoutX="215.0" layoutY="527.0" prefHeight="25.0" prefWidth="142.0" promptText="Role" visible="false" />
+      <Label fx:id="prenom" layoutX="50.0" layoutY="241.0" text="Prenom" visible="false" />
+      <TextField fx:id="PrenomTF" layoutX="186.0" layoutY="236.0" visible="false" />
+      <PasswordField fx:id="MdpPF" layoutX="194.0" layoutY="454.0" prefHeight="48.0" prefWidth="185.0" visible="false" />
+      <TextField fx:id="MdpTF" layoutX="200.0" layoutY="459.0" prefHeight="39.0" prefWidth="173.0" visible="false" />
+      <ImageView fx:id="urlImage" fitHeight="150.0" fitWidth="200.0" layoutX="643.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@image.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="imageUrlTF" layoutX="619.0" layoutY="285.0" promptText="URL de l'image" visible="false" />
+            <Text fx:id="Seconnecterbtn2" layoutX="-40.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S'inscrire" textAlignment="CENTER" visible="false" wrappingWidth="852.6708984375">
+               <font>
+                  <Font name="Comic Sans MS" size="55.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RightPane" layoutX="930.0" layoutY="34.0" prefHeight="636.0" prefWidth="332.0">
+         <children>
+            <Button fx:id="BtnSinscrire" layoutX="110.0" layoutY="521.0" mnemonicParsing="false" onAction="#SinscrireSlideBtn" prefHeight="59.0" prefWidth="150.0" text="S'inscrire" textAlignment="CENTER" textFill="#685c5c">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="toNous" layoutX="112.0" layoutY="462.0" mnemonicParsing="false" onAction="#toNous" style="-fx-background-color: white;" text="Qui sommes nous?" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

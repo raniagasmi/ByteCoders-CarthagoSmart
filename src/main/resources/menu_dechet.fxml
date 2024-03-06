@@ -1,46 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.Menu_dechet_controller">
+<AnchorPane prefHeight="720" prefWidth="1060.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.Menu_dechet_controller">
     <children>
-        <AnchorPane layoutX="86.0" layoutY="30.0" prefHeight="32.0" prefWidth="398.0">
-            <children>
-                <Button fx:id="accueil" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="311.0" layoutY="110.0" stroke="#0ea6cc00" strokeType="INSIDE" width="347.0">
+                    <fill>
+                        <LinearGradient endX="0.19417475728155342" endY="1.0" startX="1.0">
+                            <stops>
+                                <Stop color="#1f93ffb4" />
+                                <Stop color="#d3b8cb" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                </Rectangle>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-7.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1086.0" />
+                <ImageView fitHeight="89.0" fitWidth="175.0" layoutX="14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Plan%20de%20travail%201@3x.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="accueil" layoutX="247.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="déchets" layoutX="107.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6">
+                <Button fx:id="déchets" layoutX="413.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="facture" layoutX="199.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture">
+                <Button fx:id="facture" layoutX="586.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="evenements" layoutX="291.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
+                <Button fx:id="evenements" layoutX="761.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="13.0" />
                     </font>
                 </Button>
-            </children>
-        </AnchorPane>
-        <ImageView fx:id="logo" fitHeight="49.0" fitWidth="63.0" layoutX="25.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@Plan de travail 1-100.jpg" />
-            </image>
-        </ImageView>
-        <ImageView fx:id="account" fitHeight="32.0" fitWidth="33.0" layoutX="526.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
-            <!--image>
-                <Image url="" />
-            </image-->
-        </ImageView>
+
         <AnchorPane layoutX="81.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
             <children>
                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="19.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
@@ -50,16 +57,13 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="314.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
-            <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@Non_Recyclable.png" />
-                    </image>
-                </ImageView>
-            </children>
-        </AnchorPane>
-      <Button layoutX="332.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #487ef6;" text="NON RECYCLABLE" textFill="#efe9e9" />
-      <Button layoutX="100.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #487ef6;" text="RECYCLABLE" textFill="#efe9e9" />
+        <AnchorPane layoutX="314.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="332.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="NON RECYCLABLE" />
+      <Button layoutX="100.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="RECYVLABLE" />
+          <ImageView fitHeight="375.0" fitWidth="354.0" layoutX="631.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@Non_Recyclable.png" />
+              </image>
+          </ImageView>
     </children>
 </AnchorPane>

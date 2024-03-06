@@ -37,6 +37,6 @@
             <Insets right="9.0" />
         </padding>
     </HBox>
-   <Button fx:id="retour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#retourEnArriére" text="Retour" />
+    <Button fx:id="retour" layoutY="706.0" mnemonicParsing="false" onAction="#retourEnArriére" prefHeight="45.0" prefWidth="89.0" style="-fx-font-size: 16px;             -fx-padding: 10px 20px;             -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, rgba(141, 106, 206, 0.47), rgba(106, 151, 219, 1), rgba(25, 159, 223, 1));             -fx-text-fill: white; -fx-border-radius: 5px;" text="Retour" />
 
 </AnchorPane>

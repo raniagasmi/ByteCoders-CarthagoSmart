@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.ReservationManagement">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-7.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1086.0" />
+      <ImageView fitHeight="89.0" fitWidth="175.0" layoutX="14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Plan%20de%20travail%201@3x.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="accueil" layoutX="247.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil" onAction="#handleacceuil">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="déchets" layoutX="413.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Déchets" textAlignment="CENTER" textFill="#487ef6" onAction="#handledechet">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="facture" layoutX="586.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white;" text="Facture" onAction="#handlefacture">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="evenements" layoutX="761.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" >
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="149.0" layoutY="36.0" prefHeight="130.0" prefWidth="384.0" text="Reservez Vos Places" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Bell MT" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="200.0" prefHeight="32.0" prefWidth="215.0" text=" Sélectionner un évenement" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="271.0" prefHeight="32.0" prefWidth="202.0" text="Email" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="338.0" prefHeight="32.0" prefWidth="202.0" text="Numéro de téléphone" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="405.0" prefHeight="32.0" prefWidth="202.0" text="Nombre de place" textAlignment="CENTER" textFill="#19427b">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtemail" layoutX="237.0" layoutY="264.0" prefHeight="46.0" prefWidth="174.0" />
+      <TextField fx:id="txtnumero" layoutX="237.0" layoutY="331.0" prefHeight="46.0" prefWidth="174.0" />
+      <TextField fx:id="txtnbr_place" layoutX="237.0" layoutY="398.0" prefHeight="45.0" prefWidth="174.0" />
+      <Button fx:id="confirmer" layoutX="250.0" layoutY="496.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="38.0" prefWidth="174.0" text="Confirmer votre Réservation" />
+      <TextField fx:id="txtnom_event" layoutX="237.0" layoutY="193.0" prefHeight="46.0" prefWidth="174.0" />
+   </children>
+</AnchorPane>

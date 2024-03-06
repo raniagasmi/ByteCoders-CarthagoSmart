@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="778.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ByteCoders.ViewController.EventManagement">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80b8e1" height="79.0" layoutX="-14.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="1040.0" />
+      <ImageView fitHeight="58.0" fitWidth="67.0" layoutX="29.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LOGO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="accueil" layoutX="182.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleAcceuil" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: white; -fx-background-radius: white;" text="Accueil">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="evenements" layoutX="387.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Evenements" textFill="#1665dd">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+
+      </Button>
+      <Button fx:id="ajouter" layoutX="104.0" layoutY="249.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="42.0" prefWidth="187.0" text="Ajouter" textFill="#19a3bc" />
+      <Label layoutX="13.0" layoutY="117.0" text="Nom d'évenement " textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtnom_event" layoutX="139.0" layoutY="114.0" />
+      <TextField fx:id="txtlieu" layoutX="133.0" layoutY="186.0" />
+      <TextField fx:id="txtcapacite" layoutX="422.0" layoutY="185.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="txtcout" layoutX="593.0" layoutY="186.0" prefHeight="26.0" prefWidth="47.0" />
+      <TextField fx:id="txtcategorie" layoutX="419.0" layoutY="114.0" />
+      <TableView fx:id="tableView" layoutX="108.0" layoutY="337.0" prefHeight="441.0" prefWidth="672.0">
+        <columns>
+          <TableColumn fx:id="nom_eventColmn" prefWidth="106.39996337890625" text="nom_event" />
+            <TableColumn fx:id="categorieColmn" prefWidth="89.60003662109375" text="categorie" />
+            <TableColumn fx:id="dateColmn" prefWidth="75.0" text="date" />
+            <TableColumn fx:id="heureColmn" prefWidth="75.0" text="heure" />
+            <TableColumn fx:id="lieuColmn" prefWidth="66.39996337890625" text="lieu" />
+            <TableColumn fx:id="capaciteColmn" prefWidth="84.0" text="capacite" />
+            <TableColumn fx:id="coutColmn" prefWidth="75.0" text="cout" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtheure" layoutX="419.0" layoutY="150.0" prefHeight="26.0" prefWidth="102.0" />
+      <TextField fx:id="txtdate" layoutX="133.0" layoutY="150.0" />
+      <Label layoutX="339.0" layoutY="117.0" text="Categorie" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="145.0" prefHeight="34.0" prefWidth="47.0" text="Date" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="153.0" text="Heure" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="185.0" prefHeight="26.0" prefWidth="47.0" text="Lieu" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="189.0" text="Capacite" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="546.0" layoutY="186.0" prefHeight="26.0" prefWidth="47.0" text="Cout" textFill="#524ba1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifier" layoutX="353.0" layoutY="249.0" mnemonicParsing="false" onAction="#modifier" prefHeight="42.0" prefWidth="174.0" text="modifier" textFill="#19a3bc" />
+      <Button fx:id="PDF" layoutX="730.0" layoutY="303.0" mnemonicParsing="false" onAction="#pdf" text="PDF" />
+      <Button fx:id="evenements1" layoutX="624.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: white;" text="Réservation" onAction="#reservation">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
