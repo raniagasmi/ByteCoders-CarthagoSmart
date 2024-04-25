@@ -1,0 +1,13 @@
+{% extends 'blog/base.html.twig' %}
+
+{% block body %}
+    <div style="display: flex; justify-content: center;">
+        <div>
+            <h1>Create new Reservation</h1>
+
+            {{ include('reservation/_form.html.twig') }}
+
+            <a href="{{ path('app_reservation_index') }}">back to list</a>
+        </div>
+    </div>
+{% endblock %}

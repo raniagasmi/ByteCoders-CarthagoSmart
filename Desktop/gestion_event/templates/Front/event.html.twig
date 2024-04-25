@@ -1,0 +1,110 @@
+{% extends 'base-front.html.twig' %}
+
+
+{% block body %}
+<!-- Navbar & Hero Start -->
+<div class="container-fluid header position-relative overflow-hidden p-0">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="display-6 text-primary m-0">Carthago Smart</h1>
+            <img src="{{ asset('front/img/logo.png') }}" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Acceuil</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="" class="dropdown-item">Energie</a>
+                        <a href="" class="dropdown-item">Dechets</a>
+                        <a href="blog.html" class="dropdown-item">Evenemment</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <a href="#" class="btn btn-light border border-primary rounded-pill text-primary py-2 px-4 me-4">Log In</a>
+            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">Sign Up</a>
+        </div>
+    </nav>
+       <!-- Blog Start -->
+        <div class="container-fluid blog py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                    <h4 class="text-primary">Nos Evenemments</h4>
+                    <h1 class="display-5 mb-4">Join Us For New Blog</h1>
+                    <p class="mb-0">Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae maxime. Vel animi eveniet doloremque reiciendis soluta iste provident non rerum illum perferendis earum est architecto dolores vitae quia vero quod incidunt culpa corporis, porro doloribus. Voluptates nemo doloremque cum.
+                    </p>
+                </div>
+                <!--div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/blog-1.png" class="img-fluid w-100" alt="">
+                                <div class="blog-info">
+                                    <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+                                    <div class="d-flex">
+                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
+                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-content text-dark border p-4 ">
+                                <h5 class="mb-4">Dolor, sit amet consectetur adipisicing</h5>
+                                <p class="mb-4">description.</p>
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="#">Réserver</a>
+                            </div>
+                        </div>
+                    </div-->
+
+                    {% for event in events %}
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+         
+                            <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{{asset ('assets/img/blog-1.png')}}" class="img-fluid w-100" alt="">
+                                <div class="blog-info">
+                                    <span><i class="fa fa-clock"></i>{{ event.date ? event.date|date('M d, Y') : 'Date inconnue' }}</span>
+                                    <div class="d-flex">
+                                        <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
+                                        <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-content text-dark border p-4 ">
+                                <h5 class="mb-4">{{event.nomEvent}}</h5>
+                                <p class="mb-4">{{ event.lieu }}</p>
+                        <a class="btn btn-light rounded-pill py-2 px-4" href="#">Réserver</a>
+                            </div>
+                        </div>
+
+        </div>
+    </div>
+{% else %}
+    <!-- Si aucun événement n'est trouvé -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p>Aucun événement trouvé.</p>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+
+
+                        </div>
+                    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+    {% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'blog/base.html.twig' %}
+
+
+{% block body %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<section class="section" style="display: flex; align-items: center; justify-content: center; margin-right: -200px;">
+    <div class="row" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Liste des réservations: ({{ reservations|length }})</h5>
+
+                <!-- Table with stripped rows -->
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Email</th>
+                            <th>Numero</th>
+                            <th>NbrPlace</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for reservation in reservations %}
+                            <tr>
+                                <td>{{ reservation.id }}</td>
+                                <td>{{ reservation.email }}</td>
+                                <td>{{ reservation.numero }}</td>
+                                <td>{{ reservation.nbrPlace }}</td>
+                                <td>
+                                    <a href="{{ path('app_reservation_show', {'id': reservation.id}) }}"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ path('app_reservation_edit', {'id': reservation.id}) }}"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="5">Aucun enregistrement trouvé</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <!-- Pagination rendering code here -->
+                </div>
+
+                <a href="{{ path('app_reservation_new') }}"><i class="fas fa-plus"></i> Créer réservation</a>
+                <!-- End small tables -->
+
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
